@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  SafelyApp
 //
-//  Created by ReusHarper on 04/11/22.
+//  Created by ReusHarper.
 //
 
 import UIKit
