@@ -80,13 +80,13 @@
 		A259E6142916294000399D41 /* SafelyApp */ = {
 			isa = PBXGroup;
 			children = (
+				A28334F3291AF8BB00D6CE66 /* Helpers */,
+				A28334F2291AF3C800D6CE66 /* View */,
+				A28334F1291AE20700D6CE66 /* Controller */,
+				A28334F0291AE1FD00D6CE66 /* Model */,
 				A2F9843429175BFA006DFC59 /* Atoms */,
 				A259E6152916294000399D41 /* AppDelegate.swift */,
 				A259E6172916294000399D41 /* SceneDelegate.swift */,
-				A28DEF422918A9EE007C310A /* Alerts.swift */,
-				A259E6192916294000399D41 /* ViewController.swift */,
-				A2F98432291751D0006DFC59 /* AuthViewController.swift */,
-				A28DD83229178BD600F40703 /* HomeViewController.swift */,
 				A259E61B2916294000399D41 /* Main.storyboard */,
 				A29C27B02918921200D19628 /* HomeViewController.xib */,
 				A259E6202916294200399D41 /* LaunchScreen.storyboard */,
@@ -95,6 +95,38 @@
 				A2F983EC29173CE1006DFC59 /* GoogleService-Info.plist */,
 			);
 			path = SafelyApp;
+			sourceTree = "<group>";
+		};
+		A28334F0291AE1FD00D6CE66 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A28334F1291AE20700D6CE66 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A259E6192916294000399D41 /* ViewController.swift */,
+				A2F98432291751D0006DFC59 /* AuthViewController.swift */,
+				A28DD83229178BD600F40703 /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A28334F2291AF3C800D6CE66 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A28334F3291AF8BB00D6CE66 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A28DEF422918A9EE007C310A /* Alerts.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		A2F9843429175BFA006DFC59 /* Atoms */ = {
