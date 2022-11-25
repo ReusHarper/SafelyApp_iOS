@@ -4,47 +4,55 @@ import Firebase
 import FirebaseAnalytics
 import FirebaseAuth
 
-class AuthViewController: UIViewController {
+class SignUpViewController: UIViewController {
 
     // ==================== Text fields ====================
+    @IBOutlet var nameTextField: UITextField!
     @IBOutlet var emailTextField: UITextField!
-    @IBOutlet var passTextField: UITextField!
+    @IBOutlet var passwordTextField: UITextField!
+    @IBOutlet var passwordRepeatTextField: UITextField!
     
     // ==================== Buttons ====================
-    @IBOutlet var loginButton: GradientButtonUI!
-    @IBOutlet var signUpButton: UIButton!
+    @IBOutlet var signUpButton: GradientButtonUI!
+    @IBOutlet var logInButton: UIButton!
+    
+    // ==================== Propierties ====================
+    private var email : String?
+    private var provider : ProviderType? = .basic
     
     // ==================== Objects ====================
-    private var alerts = Alerts()
     var user : LoginUserEmail?
+    var userCreated : User?
+    private var alerts = Alerts()
     
     // ==================== Methods ====================
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Agregamos un evento para analizar cada que un usuario ingresa a la app
-        Analytics.logEvent("InitScreen", parameters: ["message":"Integración de Firebase completa"])
     }
     
-    @IBAction func loginButtonAction(_ sender: Any) {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    // Creacion de cuenta
+    @IBAction func signupButtonAction(_ sender: Any) {
         if validateFields() == true {
-            login()
+            signUp()
         }
     }
     
-    @IBAction func signupButtonAction(_ sender: Any) {
-        // Cambio de vista a "Sign Up"
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "signUp") as! SignUpViewController
-        vc.modalPresentationStyle = .overFullScreen
-        present(vc, animated: true)
-    }
-    
     func validateFields() -> Bool {
+        let name = nameTextField.text
         let email = emailTextField.text
-        let pass = passTextField.text
+        let pass = passwordTextField.text
+        let passRepeat = passwordRepeatTextField.text
         
-        if email?.isEmpty == true || pass?.isEmpty == true {
+        
+        if name?.isEmpty == true || email?.isEmpty == true || pass?.isEmpty == true || passRepeat?.isEmpty == true {
+            if name?.isEmpty == true {
+                print("No name text")
+            }
+            
             if email?.isEmpty == true {
                 print("No email text")
             }
@@ -53,26 +61,29 @@ class AuthViewController: UIViewController {
                 print("No password text")
             }
             
+            if passRepeat?.isEmpty == true {
+                print("No password x2 text")
+            }
+            
             return false
         }
         
         return true
     }
     
-    func login() {
+    func signUp() {
         // Definicion de los datos del usuario a ingresar al sistema
         let email = emailTextField.text
-        let password = passTextField.text
+        let password = passwordTextField.text
         
         user = LoginUserEmail(email: email!, pType: .basic)
-        print("email: \(String(describing: user?.email))")
-        print("password: \(String(describing: password))")
         
-        Auth.auth().signIn(withEmail: email!, password: password!) { [weak self] authResult, error in
+        Auth.auth().createUser(withEmail: email!, password: password!) { [weak self] authResult, error in
             //guard let strongSelf = self else { return }
             if let error = error {
-                print("Error: \(error.localizedDescription)")
+                print(error.localizedDescription)
             }
+            
             self!.checkUserInfo()
         }
     }
@@ -80,11 +91,16 @@ class AuthViewController: UIViewController {
     func checkUserInfo() {
         if Auth.auth().currentUser != nil {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(identifier: "home") as! HomeViewController
+            let vc = storyboard.instantiateViewController(identifier: "create") as! CreateViewController
             vc.modalPresentationStyle = .fullScreen
             vc.userReceived = user
             present(vc, animated: true, completion: nil)
         }
     }
+    
+    @IBAction func loginButtonAction(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     
 }

@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A2191855292EC07D002FC668 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2191854292EC07D002FC668 /* User.swift */; };
 		A259E6162916294000399D41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A259E6152916294000399D41 /* AppDelegate.swift */; };
 		A259E6182916294000399D41 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A259E6172916294000399D41 /* SceneDelegate.swift */; };
 		A259E61A2916294000399D41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A259E6192916294000399D41 /* ViewController.swift */; };
 		A259E61D2916294000399D41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A259E61B2916294000399D41 /* Main.storyboard */; };
 		A259E61F2916294200399D41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A259E61E2916294200399D41 /* Assets.xcassets */; };
 		A259E6222916294200399D41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A259E6202916294200399D41 /* LaunchScreen.storyboard */; };
+		A28334F5291B13D200D6CE66 /* LoginUserEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28334F4291B13D200D6CE66 /* LoginUserEmail.swift */; };
+		A28334F7291B143C00D6CE66 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28334F6291B143C00D6CE66 /* SignUpViewController.swift */; };
+		A287C2E22925F3D0002D9822 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A287C2E12925F3D0002D9822 /* CreateViewController.swift */; };
 		A28DD83329178BD600F40703 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28DD83229178BD600F40703 /* HomeViewController.swift */; };
 		A28DEF432918A9EE007C310A /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28DEF422918A9EE007C310A /* Alerts.swift */; };
-		A29C27B12918921200D19628 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A29C27B02918921200D19628 /* HomeViewController.xib */; };
+		A299CFA5292448AF006376C1 /* InputTextLabelUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A299CFA4292448AF006376C1 /* InputTextLabelUI.swift */; };
+		A299CFA829244F90006376C1 /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = A299CFA729244F90006376C1 /* TinyConstraints */; };
+		A299CFAB292451DE006376C1 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = A299CFAA292451DE006376C1 /* Lottie */; };
 		A2F983ED29173CE1006DFC59 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2F983EC29173CE1006DFC59 /* GoogleService-Info.plist */; };
 		A2F9842729174953006DFC59 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A2F9842629174953006DFC59 /* FirebaseAnalytics */; };
 		A2F9842929174953006DFC59 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A2F9842829174953006DFC59 /* FirebaseAuth */; };
@@ -28,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A2191854292EC07D002FC668 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A259E6122916294000399D41 /* SafelyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafelyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A259E6152916294000399D41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A259E6172916294000399D41 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,9 +43,12 @@
 		A259E61E2916294200399D41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A259E6212916294200399D41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A259E6232916294200399D41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A28334F4291B13D200D6CE66 /* LoginUserEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserEmail.swift; sourceTree = "<group>"; };
+		A28334F6291B143C00D6CE66 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		A287C2E12925F3D0002D9822 /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
 		A28DD83229178BD600F40703 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A28DEF422918A9EE007C310A /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
-		A29C27B02918921200D19628 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = HomeViewController.xib; path = Atoms/HomeViewController.xib; sourceTree = "<group>"; };
+		A299CFA4292448AF006376C1 /* InputTextLabelUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextLabelUI.swift; sourceTree = "<group>"; };
 		A2F983EC29173CE1006DFC59 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A2F98432291751D0006DFC59 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		A2F9843629175C6D006DFC59 /* GradientButtonUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButtonUI.swift; sourceTree = "<group>"; };
@@ -49,12 +59,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A299CFA829244F90006376C1 /* TinyConstraints in Frameworks */,
 				A2F9842F29174953006DFC59 /* FirebaseDatabaseSwift in Frameworks */,
 				A2F9842729174953006DFC59 /* FirebaseAnalytics in Frameworks */,
 				A2F9842B29174953006DFC59 /* FirebaseAuthCombine-Community in Frameworks */,
 				A2F9842D29174953006DFC59 /* FirebaseDatabase in Frameworks */,
 				A2F9842929174953006DFC59 /* FirebaseAuth in Frameworks */,
 				A2F9843129174953006DFC59 /* FirebaseStorage in Frameworks */,
+				A299CFAB292451DE006376C1 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,16 +92,11 @@
 		A259E6142916294000399D41 /* SafelyApp */ = {
 			isa = PBXGroup;
 			children = (
-				A28334F3291AF8BB00D6CE66 /* Helpers */,
 				A28334F2291AF3C800D6CE66 /* View */,
 				A28334F1291AE20700D6CE66 /* Controller */,
 				A28334F0291AE1FD00D6CE66 /* Model */,
-				A2F9843429175BFA006DFC59 /* Atoms */,
 				A259E6152916294000399D41 /* AppDelegate.swift */,
 				A259E6172916294000399D41 /* SceneDelegate.swift */,
-				A259E61B2916294000399D41 /* Main.storyboard */,
-				A29C27B02918921200D19628 /* HomeViewController.xib */,
-				A259E6202916294200399D41 /* LaunchScreen.storyboard */,
 				A259E61E2916294200399D41 /* Assets.xcassets */,
 				A259E6232916294200399D41 /* Info.plist */,
 				A2F983EC29173CE1006DFC59 /* GoogleService-Info.plist */,
@@ -100,6 +107,8 @@
 		A28334F0291AE1FD00D6CE66 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A28334F4291B13D200D6CE66 /* LoginUserEmail.swift */,
+				A2191854292EC07D002FC668 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -110,6 +119,8 @@
 				A259E6192916294000399D41 /* ViewController.swift */,
 				A2F98432291751D0006DFC59 /* AuthViewController.swift */,
 				A28DD83229178BD600F40703 /* HomeViewController.swift */,
+				A28334F6291B143C00D6CE66 /* SignUpViewController.swift */,
+				A287C2E12925F3D0002D9822 /* CreateViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -117,6 +128,9 @@
 		A28334F2291AF3C800D6CE66 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A28334F3291AF8BB00D6CE66 /* Helpers */,
+				A259E6202916294200399D41 /* LaunchScreen.storyboard */,
+				A259E61B2916294000399D41 /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -124,17 +138,11 @@
 		A28334F3291AF8BB00D6CE66 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				A2F9843629175C6D006DFC59 /* GradientButtonUI.swift */,
 				A28DEF422918A9EE007C310A /* Alerts.swift */,
+				A299CFA4292448AF006376C1 /* InputTextLabelUI.swift */,
 			);
 			path = Helpers;
-			sourceTree = "<group>";
-		};
-		A2F9843429175BFA006DFC59 /* Atoms */ = {
-			isa = PBXGroup;
-			children = (
-				A2F9843629175C6D006DFC59 /* GradientButtonUI.swift */,
-			);
-			path = Atoms;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +168,8 @@
 				A2F9842C29174953006DFC59 /* FirebaseDatabase */,
 				A2F9842E29174953006DFC59 /* FirebaseDatabaseSwift */,
 				A2F9843029174953006DFC59 /* FirebaseStorage */,
+				A299CFA729244F90006376C1 /* TinyConstraints */,
+				A299CFAA292451DE006376C1 /* Lottie */,
 			);
 			productName = SafelyApp;
 			productReference = A259E6122916294000399D41 /* SafelyApp.app */;
@@ -191,6 +201,8 @@
 			mainGroup = A259E6092916294000399D41;
 			packageReferences = (
 				A2F9842529174953006DFC59 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				A299CFA629244F8F006376C1 /* XCRemoteSwiftPackageReference "TinyConstraints" */,
+				A299CFA9292451DE006376C1 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = A259E6132916294000399D41 /* Products */;
 			projectDirPath = "";
@@ -208,7 +220,6 @@
 			files = (
 				A259E6222916294200399D41 /* LaunchScreen.storyboard in Resources */,
 				A2F983ED29173CE1006DFC59 /* GoogleService-Info.plist in Resources */,
-				A29C27B12918921200D19628 /* HomeViewController.xib in Resources */,
 				A259E61F2916294200399D41 /* Assets.xcassets in Resources */,
 				A259E61D2916294000399D41 /* Main.storyboard in Resources */,
 			);
@@ -221,11 +232,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2191855292EC07D002FC668 /* User.swift in Sources */,
 				A2F98433291751D0006DFC59 /* AuthViewController.swift in Sources */,
+				A28334F7291B143C00D6CE66 /* SignUpViewController.swift in Sources */,
 				A259E61A2916294000399D41 /* ViewController.swift in Sources */,
 				A259E6162916294000399D41 /* AppDelegate.swift in Sources */,
 				A259E6182916294000399D41 /* SceneDelegate.swift in Sources */,
+				A28334F5291B13D200D6CE66 /* LoginUserEmail.swift in Sources */,
+				A299CFA5292448AF006376C1 /* InputTextLabelUI.swift in Sources */,
 				A2F9843729175C6D006DFC59 /* GradientButtonUI.swift in Sources */,
+				A287C2E22925F3D0002D9822 /* CreateViewController.swift in Sources */,
 				A28DEF432918A9EE007C310A /* Alerts.swift in Sources */,
 				A28DD83329178BD600F40703 /* HomeViewController.swift in Sources */,
 			);
@@ -453,6 +469,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		A299CFA629244F8F006376C1 /* XCRemoteSwiftPackageReference "TinyConstraints" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/roberthein/TinyConstraints.git";
+			requirement = {
+				kind = exactVersion;
+				version = 4.0.2;
+			};
+		};
+		A299CFA9292451DE006376C1 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		A2F9842529174953006DFC59 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -464,6 +496,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A299CFA729244F90006376C1 /* TinyConstraints */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A299CFA629244F8F006376C1 /* XCRemoteSwiftPackageReference "TinyConstraints" */;
+			productName = TinyConstraints;
+		};
+		A299CFAA292451DE006376C1 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A299CFA9292451DE006376C1 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
 		A2F9842629174953006DFC59 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A2F9842529174953006DFC59 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
