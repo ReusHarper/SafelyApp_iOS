@@ -39,6 +39,7 @@ class CreateViewController: UIViewController {
         providerTextLabel.text = provider?.rawValue
     }
     
+    /*
     // La forma en como se deba cerrar sesion dependera del tipo de logeo implementado
     @IBAction func closeSession(_ sender: Any) {
         switch provider {
@@ -55,5 +56,6 @@ class CreateViewController: UIViewController {
             print("Error: No se logro encontrar el tipo de proveedor de correo.")
         }
     }
+    */
     
 }

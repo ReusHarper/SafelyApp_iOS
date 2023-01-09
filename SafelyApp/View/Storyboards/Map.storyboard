@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JQu-X1-tco">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Mapa-->
+        <scene sceneID="dP0-6n-6Wf">
+            <objects>
+                <viewController storyboardIdentifier="MapID" id="JQu-X1-tco" customClass="MapViewController" customModule="SafelyApp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Jq-xE-i66">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rwM-Im-h0b" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="48" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="sE8-HH-fXx"/>
+                                    <constraint firstAttribute="height" constant="896" id="sF3-AY-fMm"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M0r-WY-1AP" userLabel="Button menu" customClass="GradientButtonUI" customModule="SafelyApp" customModuleProvider="target">
+                                <rect key="frame" x="20" y="68" width="46.5" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="xhV-4k-cJM"/>
+                                </constraints>
+                                <color key="tintColor" name="BackgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="menucard.fill" catalog="system"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="firtsColor">
+                                        <color key="value" name="GradientPurpleColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                        <color key="value" name="GradientVioletColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="showSideMenu:" destination="JQu-X1-tco" eventType="touchUpInside" id="dZ9-Pf-eql"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tng-rd-5hK" userLabel="Button alerts" customClass="GradientButtonUI" customModule="SafelyApp" customModuleProvider="target">
+                                <rect key="frame" x="345" y="68" width="49" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="dug-eb-9pF"/>
+                                </constraints>
+                                <color key="tintColor" name="BackgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="bell.fill" catalog="system"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="firtsColor">
+                                        <color key="value" name="GradientPurpleColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                        <color key="value" name="GradientVioletColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="getNotifications:" destination="JQu-X1-tco" eventType="touchUpInside" id="C4S-Ac-YhP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bk6-rX-zvk" userLabel="Button marker" customClass="GradientButtonUI" customModule="SafelyApp" customModuleProvider="target">
+                                <rect key="frame" x="345.5" y="593" width="48.5" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="ywg-nM-1To"/>
+                                </constraints>
+                                <color key="tintColor" name="BackgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="pin.fill" catalog="system"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="firtsColor">
+                                        <color key="value" name="GradientPurpleColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                        <color key="value" name="GradientVioletColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="setCurrentPosition:" destination="JQu-X1-tco" eventType="touchUpInside" id="es8-M3-Xhl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qe0-k5-db5" userLabel="Button maps" customClass="GradientButtonUI" customModule="SafelyApp" customModuleProvider="target">
+                                <rect key="frame" x="343" y="658" width="51" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="2Z6-zT-LAD"/>
+                                </constraints>
+                                <color key="tintColor" name="BackgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="map.fill" catalog="system"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="firtsColor">
+                                        <color key="value" name="GradientPurpleColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                        <color key="value" name="GradientVioletColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="setChangeTypeMap:" destination="JQu-X1-tco" eventType="touchUpInside" id="WEs-23-4nQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wx5-Pr-KKV" userLabel="Button emergency" customClass="GradientButtonUI" customModule="SafelyApp" customModuleProvider="target">
+                                <rect key="frame" x="20" y="723" width="374" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="T2C-Ky-hTb"/>
+                                </constraints>
+                                <color key="tintColor" name="BackgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="EMERGENCIA">
+                                    <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="firtsColor">
+                                        <color key="value" name="GradientPurpleColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                        <color key="value" name="GradientVioletColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Oho-lJ-RiJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Oho-lJ-RiJ" firstAttribute="trailing" secondItem="tng-rd-5hK" secondAttribute="trailing" constant="20" id="2hN-cD-hLO"/>
+                            <constraint firstItem="M0r-WY-1AP" firstAttribute="top" secondItem="Oho-lJ-RiJ" secondAttribute="top" constant="20" id="3J9-Qg-ZH1"/>
+                            <constraint firstItem="Oho-lJ-RiJ" firstAttribute="trailing" secondItem="qe0-k5-db5" secondAttribute="trailing" constant="20" id="54I-32-rzj"/>
+                            <constraint firstItem="qe0-k5-db5" firstAttribute="top" secondItem="bk6-rX-zvk" secondAttribute="bottom" constant="20" id="8j2-dA-IvP"/>
+                            <constraint firstItem="wx5-Pr-KKV" firstAttribute="top" secondItem="qe0-k5-db5" secondAttribute="bottom" constant="20" id="Fca-Ff-tXW"/>
+                            <constraint firstItem="rwM-Im-h0b" firstAttribute="top" secondItem="Oho-lJ-RiJ" secondAttribute="top" id="NVL-h8-MmY"/>
+                            <constraint firstItem="Oho-lJ-RiJ" firstAttribute="bottom" secondItem="wx5-Pr-KKV" secondAttribute="bottom" constant="20" id="PJJ-Zg-Jw5"/>
+                            <constraint firstItem="rwM-Im-h0b" firstAttribute="top" secondItem="Oho-lJ-RiJ" secondAttribute="top" id="Yk0-PS-0lo"/>
+                            <constraint firstItem="M0r-WY-1AP" firstAttribute="leading" secondItem="Oho-lJ-RiJ" secondAttribute="leading" constant="20" id="YlA-7D-HPc"/>
+                            <constraint firstItem="wx5-Pr-KKV" firstAttribute="leading" secondItem="Oho-lJ-RiJ" secondAttribute="leading" constant="20" id="ij5-LO-h3M"/>
+                            <constraint firstItem="tng-rd-5hK" firstAttribute="top" secondItem="Oho-lJ-RiJ" secondAttribute="top" constant="20" id="lVA-B0-bPi"/>
+                            <constraint firstItem="rwM-Im-h0b" firstAttribute="leading" secondItem="Oho-lJ-RiJ" secondAttribute="leading" id="ngA-wO-E5d"/>
+                            <constraint firstItem="rwM-Im-h0b" firstAttribute="leading" secondItem="Oho-lJ-RiJ" secondAttribute="leading" id="nqg-57-sDM"/>
+                            <constraint firstItem="Oho-lJ-RiJ" firstAttribute="trailing" secondItem="wx5-Pr-KKV" secondAttribute="trailing" constant="20" id="pPd-iD-xrh"/>
+                            <constraint firstItem="Oho-lJ-RiJ" firstAttribute="trailing" secondItem="bk6-rX-zvk" secondAttribute="trailing" constant="20" id="tIL-xw-55h"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Mapa" image="location.fill" catalog="system" id="EbJ-Xa-m02"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="alertsButton" destination="tng-rd-5hK" id="HRj-w3-bIY"/>
+                        <outlet property="emergencyButton" destination="wx5-Pr-KKV" id="1ge-zU-Q3J"/>
+                        <outlet property="mainView" destination="7Jq-xE-i66" id="SoU-jq-Wuv"/>
+                        <outlet property="mapView" destination="rwM-Im-h0b" id="rNC-xA-1L1"/>
+                        <outlet property="markerButton" destination="bk6-rX-zvk" id="zfD-hY-kFj"/>
+                        <outlet property="menuButton" destination="M0r-WY-1AP" id="NOS-J7-6p4"/>
+                        <outlet property="typeMapButton" destination="qe0-k5-db5" id="UUV-Kh-uox"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SIL-ny-cFF" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-400.00000000000006" y="62.276785714285708"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="M0r-WY-1AP">
+            <size key="intrinsicContentSize" width="46.5" height="34"/>
+        </designable>
+        <designable name="bk6-rX-zvk">
+            <size key="intrinsicContentSize" width="48.5" height="34"/>
+        </designable>
+        <designable name="qe0-k5-db5">
+            <size key="intrinsicContentSize" width="51" height="34"/>
+        </designable>
+        <designable name="tng-rd-5hK">
+            <size key="intrinsicContentSize" width="49.5" height="34"/>
+        </designable>
+        <designable name="wx5-Pr-KKV">
+            <size key="intrinsicContentSize" width="184.5" height="45.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="bell.fill" catalog="system" width="123" height="128"/>
+        <image name="location.fill" catalog="system" width="128" height="119"/>
+        <image name="map.fill" catalog="system" width="128" height="110"/>
+        <image name="menucard.fill" catalog="system" width="105" height="128"/>
+        <image name="pin.fill" catalog="system" width="116" height="128"/>
+        <namedColor name="BackgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GradientPurpleColor">
+            <color red="0.61599999666213989" green="0.69800001382827759" blue="0.97600001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GradientVioletColor">
+            <color red="0.74900001287460327" green="0.65100002288818359" blue="0.97600001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

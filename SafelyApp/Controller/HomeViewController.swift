@@ -1,4 +1,4 @@
-// Librarys and Packages
+// ==================== Dependencies ====================
 import UIKit
 import FirebaseAuth
 
@@ -8,47 +8,44 @@ enum ProviderType: String {
 
 class HomeViewController: UIViewController {
     
-    @IBOutlet var emailTextLabel: UILabel!
-    @IBOutlet var providerTextLabel: UILabel!
-    @IBOutlet var closeSessionButton: GradientButtonUI!
-    
-    private let email: String
-    private let provider: ProviderType
+    // ==================== Objects ====================
     private var alerts = Alerts()
+    var userReceived : LoginUserEmail?
     
-    init(email: String, provider: ProviderType) {
-        //print("xd: " + email)
-        //print(provider)
-        self.email = email
-        self.provider = provider
-        print("self.mail: " + self.email)
-        
-        super.init(nibName: "HomeViewController", bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    // ==================== Properties ====================
+    private var email: String?
+    private var provider: ProviderType?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Inicio"
-        emailTextLabel.text = email
-        providerTextLabel.text = provider.rawValue
+        // Establecimiento de las propiedades
+        email = userReceived?.email
+        provider = userReceived?.pType
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    /*
     // La forma en como se deba cerrar sesion dependera del tipo de logeo implementado
+    // (para este caso la unica forma sera la basica empleando un email)
     @IBAction func closeSessionButtonnAction(_ sender: Any) {
         switch provider {
         case .basic:
             do {
                 try Auth.auth().signOut()
-                navigationController?.popViewController(animated: true)
+                // Si se empleara un navigationControoller simplemennte se debe sacar del stack de vistas
+                //navigationController?.popViewController(animated: true)
+                dismiss(animated: true, completion: nil)
             } catch {
                 alerts.message(title: "Error", message: "No fue posible cerrar sesión")
             }
+        case .none:
+            print("Error: No se logro encontrar el tipo de proveedor de correo.")
         }
     }
-
+    */
+    
 }

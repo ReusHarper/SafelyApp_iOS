@@ -1,13 +1,17 @@
 // Librarys and Packages
 import UIKit
 import FirebaseCore
-
+import GoogleMaps
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Integracion de Firebase
         FirebaseApp.configure()
+        
+        // Integracion de Google Maps
+        GMSServices.provideAPIKey("AIzaSyBSJg-7OXS1JwWziYU9fixqG9SqDHKMktA ")
+        
         return true
     }
 

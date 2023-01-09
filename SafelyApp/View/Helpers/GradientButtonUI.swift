@@ -34,7 +34,7 @@ class GradientButtonUI: UIButton {
         }
     }
     
-    func updateView() {
+    private func updateView() {
         let layer = self.layer as! CAGradientLayer
         layer.colors = [firtsColor.cgColor, secondColor.cgColor]
         
