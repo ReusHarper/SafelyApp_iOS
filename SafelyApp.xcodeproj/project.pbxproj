@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		81A038AF1D73FF3199FD3513 /* Pods_SafelyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8772B04F90F098EFBC7D0029 /* Pods_SafelyApp.framework */; };
+		A207B2FA296E196000A04314 /* ContactsTabView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A207B2F9296E196000A04314 /* ContactsTabView.xib */; };
+		A207B2FC296E289300A04314 /* AddTabView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A207B2FB296E289300A04314 /* AddTabView.xib */; };
+		A207B2FE296E28B000A04314 /* AddTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A207B2FD296E28B000A04314 /* AddTabView.swift */; };
+		A207B300296E28EB00A04314 /* RequestTabView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A207B2FF296E28EB00A04314 /* RequestTabView.xib */; };
+		A207B302296E28FA00A04314 /* RequestTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A207B301296E28FA00A04314 /* RequestTabView.swift */; };
 		A2191855292EC07D002FC668 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2191854292EC07D002FC668 /* User.swift */; };
 		A24FA7E5296774F000556566 /* SideMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24FA7E4296774F000556566 /* SideMenuModel.swift */; };
 		A24FA7ED296797F600556566 /* safely_color.png in Resources */ = {isa = PBXBuildFile; fileRef = A24FA7E7296797F500556566 /* safely_color.png */; };
@@ -19,7 +24,7 @@
 		A259E6162916294000399D41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A259E6152916294000399D41 /* AppDelegate.swift */; };
 		A259E6182916294000399D41 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A259E6172916294000399D41 /* SceneDelegate.swift */; };
 		A259E61A2916294000399D41 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A259E6192916294000399D41 /* MapViewController.swift */; };
-		A259E61D2916294000399D41 /* Sign.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A259E61B2916294000399D41 /* Sign.storyboard */; };
+		A259E61D2916294000399D41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A259E61B2916294000399D41 /* Main.storyboard */; };
 		A259E61F2916294200399D41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A259E61E2916294200399D41 /* Assets.xcassets */; };
 		A259E6222916294200399D41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A259E6202916294200399D41 /* LaunchScreen.storyboard */; };
 		A26A74C1294B92A8004FDBB8 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A26A74C0294B92A8004FDBB8 /* Map.storyboard */; };
@@ -29,15 +34,15 @@
 		A28204DB296CBD0300DD8305 /* style_light.json in Resources */ = {isa = PBXBuildFile; fileRef = A28204DA296CBD0300DD8305 /* style_light.json */; };
 		A28334F5291B13D200D6CE66 /* LoginUserEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28334F4291B13D200D6CE66 /* LoginUserEmail.swift */; };
 		A28334F7291B143C00D6CE66 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28334F6291B143C00D6CE66 /* SignUpViewController.swift */; };
-		A287C2E22925F3D0002D9822 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A287C2E12925F3D0002D9822 /* CreateViewController.swift */; };
 		A28DD83329178BD600F40703 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28DD83229178BD600F40703 /* HomeViewController.swift */; };
 		A28DEF432918A9EE007C310A /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28DEF422918A9EE007C310A /* Alerts.swift */; };
+		A29387D1296D0BA4002E7E15 /* ContactsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29387CF296D0BA4002E7E15 /* ContactsTabView.swift */; };
 		A299CFA5292448AF006376C1 /* InputTextLabelUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A299CFA4292448AF006376C1 /* InputTextLabelUI.swift */; };
 		A299CFA829244F90006376C1 /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = A299CFA729244F90006376C1 /* TinyConstraints */; };
 		A299CFAB292451DE006376C1 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = A299CFAA292451DE006376C1 /* Lottie */; };
 		A2AB313A294A862400761461 /* CustomTabBarUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AB3139294A862400761461 /* CustomTabBarUI.swift */; };
 		A2AE98D7294B856A004AE824 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2AE98D6294B856A004AE824 /* Onboarding.storyboard */; };
-		A2AE98DB294B8678004AE824 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2AE98DA294B8678004AE824 /* Main.storyboard */; };
+		A2AE98DB294B8678004AE824 /* ControllerMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2AE98DA294B8678004AE824 /* ControllerMain.storyboard */; };
 		A2D5144B294A4CE300A87BB9 /* style_dark.json in Resources */ = {isa = PBXBuildFile; fileRef = A2D5144A294A4CE300A87BB9 /* style_dark.json */; };
 		A2D5144D294A528500A87BB9 /* CustomTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D5144C294A528500A87BB9 /* CustomTabBarViewController.swift */; };
 		A2F983ED29173CE1006DFC59 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2F983EC29173CE1006DFC59 /* GoogleService-Info.plist */; };
@@ -54,6 +59,11 @@
 /* Begin PBXFileReference section */
 		494D4281670A30E601075F09 /* Pods-SafelyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SafelyApp.release.xcconfig"; path = "Target Support Files/Pods-SafelyApp/Pods-SafelyApp.release.xcconfig"; sourceTree = "<group>"; };
 		8772B04F90F098EFBC7D0029 /* Pods_SafelyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SafelyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A207B2F9296E196000A04314 /* ContactsTabView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactsTabView.xib; sourceTree = "<group>"; };
+		A207B2FB296E289300A04314 /* AddTabView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTabView.xib; sourceTree = "<group>"; };
+		A207B2FD296E28B000A04314 /* AddTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTabView.swift; sourceTree = "<group>"; };
+		A207B2FF296E28EB00A04314 /* RequestTabView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RequestTabView.xib; sourceTree = "<group>"; };
+		A207B301296E28FA00A04314 /* RequestTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTabView.swift; sourceTree = "<group>"; };
 		A2191854292EC07D002FC668 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A24FA7E4296774F000556566 /* SideMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuModel.swift; sourceTree = "<group>"; };
 		A24FA7E7296797F500556566 /* safely_color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = safely_color.png; sourceTree = "<group>"; };
@@ -66,7 +76,7 @@
 		A259E6152916294000399D41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A259E6172916294000399D41 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A259E6192916294000399D41 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		A259E61C2916294000399D41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Sign.storyboard; sourceTree = "<group>"; };
+		A259E61C2916294000399D41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A259E61E2916294200399D41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A259E6212916294200399D41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A259E6232916294200399D41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -77,13 +87,13 @@
 		A28204DA296CBD0300DD8305 /* style_light.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = style_light.json; sourceTree = "<group>"; };
 		A28334F4291B13D200D6CE66 /* LoginUserEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserEmail.swift; sourceTree = "<group>"; };
 		A28334F6291B143C00D6CE66 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		A287C2E12925F3D0002D9822 /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
 		A28DD83229178BD600F40703 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A28DEF422918A9EE007C310A /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
+		A29387CF296D0BA4002E7E15 /* ContactsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTabView.swift; sourceTree = "<group>"; };
 		A299CFA4292448AF006376C1 /* InputTextLabelUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextLabelUI.swift; sourceTree = "<group>"; };
 		A2AB3139294A862400761461 /* CustomTabBarUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarUI.swift; sourceTree = "<group>"; };
 		A2AE98D6294B856A004AE824 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
-		A2AE98DA294B8678004AE824 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A2AE98DA294B8678004AE824 /* ControllerMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ControllerMain.storyboard; sourceTree = "<group>"; };
 		A2D5144A294A4CE300A87BB9 /* style_dark.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = style_dark.json; sourceTree = "<group>"; };
 		A2D5144C294A528500A87BB9 /* CustomTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarViewController.swift; sourceTree = "<group>"; };
 		A2F983EC29173CE1006DFC59 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -186,8 +196,13 @@
 				A2F98432291751D0006DFC59 /* AuthViewController.swift */,
 				A28DD83229178BD600F40703 /* HomeViewController.swift */,
 				A28334F6291B143C00D6CE66 /* SignUpViewController.swift */,
-				A287C2E12925F3D0002D9822 /* CreateViewController.swift */,
 				A26A74C8294BD5FA004FDBB8 /* AddGroupViewController.swift */,
+				A29387CF296D0BA4002E7E15 /* ContactsTabView.swift */,
+				A207B2F9296E196000A04314 /* ContactsTabView.xib */,
+				A207B2FD296E28B000A04314 /* AddTabView.swift */,
+				A207B2FB296E289300A04314 /* AddTabView.xib */,
+				A207B301296E28FA00A04314 /* RequestTabView.swift */,
+				A207B2FF296E28EB00A04314 /* RequestTabView.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -219,8 +234,8 @@
 			children = (
 				A259E6202916294200399D41 /* LaunchScreen.storyboard */,
 				A2AE98D6294B856A004AE824 /* Onboarding.storyboard */,
-				A259E61B2916294000399D41 /* Sign.storyboard */,
-				A2AE98DA294B8678004AE824 /* Main.storyboard */,
+				A259E61B2916294000399D41 /* Main.storyboard */,
+				A2AE98DA294B8678004AE824 /* ControllerMain.storyboard */,
 				A26A74C0294B92A8004FDBB8 /* Map.storyboard */,
 				A26A74C2294B93E4004FDBB8 /* Add.storyboard */,
 				A26A74C4294B9467004FDBB8 /* Devices.storyboard */,
@@ -312,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A24FA7EE296797F600556566 /* safely_vertical_color.png in Resources */,
+				A207B2FA296E196000A04314 /* ContactsTabView.xib in Resources */,
 				A24FA7F2296797F600556566 /* safely_monocromatico.png in Resources */,
 				A259E6222916294200399D41 /* LaunchScreen.storyboard in Resources */,
 				A2F983ED29173CE1006DFC59 /* GoogleService-Info.plist in Resources */,
@@ -325,9 +341,11 @@
 				A2AE98D7294B856A004AE824 /* Onboarding.storyboard in Resources */,
 				A2D5144B294A4CE300A87BB9 /* style_dark.json in Resources */,
 				A26A74C5294B9467004FDBB8 /* Devices.storyboard in Resources */,
-				A259E61D2916294000399D41 /* Sign.storyboard in Resources */,
+				A259E61D2916294000399D41 /* Main.storyboard in Resources */,
+				A207B2FC296E289300A04314 /* AddTabView.xib in Resources */,
 				A24FA7ED296797F600556566 /* safely_color.png in Resources */,
-				A2AE98DB294B8678004AE824 /* Main.storyboard in Resources */,
+				A207B300296E28EB00A04314 /* RequestTabView.xib in Resources */,
+				A2AE98DB294B8678004AE824 /* ControllerMain.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,17 +400,19 @@
 			files = (
 				A2191855292EC07D002FC668 /* User.swift in Sources */,
 				A2F98433291751D0006DFC59 /* AuthViewController.swift in Sources */,
+				A207B2FE296E28B000A04314 /* AddTabView.swift in Sources */,
 				A28334F7291B143C00D6CE66 /* SignUpViewController.swift in Sources */,
 				A259E61A2916294000399D41 /* MapViewController.swift in Sources */,
 				A2AB313A294A862400761461 /* CustomTabBarUI.swift in Sources */,
+				A207B302296E28FA00A04314 /* RequestTabView.swift in Sources */,
 				A259E6162916294000399D41 /* AppDelegate.swift in Sources */,
 				A259E6182916294000399D41 /* SceneDelegate.swift in Sources */,
 				A28334F5291B13D200D6CE66 /* LoginUserEmail.swift in Sources */,
 				A299CFA5292448AF006376C1 /* InputTextLabelUI.swift in Sources */,
 				A2F9843729175C6D006DFC59 /* GradientButtonUI.swift in Sources */,
-				A287C2E22925F3D0002D9822 /* CreateViewController.swift in Sources */,
 				A28DEF432918A9EE007C310A /* Alerts.swift in Sources */,
 				A24FA7E5296774F000556566 /* SideMenuModel.swift in Sources */,
+				A29387D1296D0BA4002E7E15 /* ContactsTabView.swift in Sources */,
 				A26A74C9294BD5FA004FDBB8 /* AddGroupViewController.swift in Sources */,
 				A28DD83329178BD600F40703 /* HomeViewController.swift in Sources */,
 				A2D5144D294A528500A87BB9 /* CustomTabBarViewController.swift in Sources */,
@@ -402,12 +422,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A259E61B2916294000399D41 /* Sign.storyboard */ = {
+		A259E61B2916294000399D41 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A259E61C2916294000399D41 /* Base */,
 			);
-			name = Sign.storyboard;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		A259E6202916294200399D41 /* LaunchScreen.storyboard */ = {
@@ -553,8 +573,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -588,8 +608,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

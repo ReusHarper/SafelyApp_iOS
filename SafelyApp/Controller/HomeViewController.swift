@@ -1,5 +1,7 @@
 // ==================== Dependencies ====================
 import UIKit
+import Firebase
+import FirebaseAnalytics
 import FirebaseAuth
 
 enum ProviderType: String {
@@ -7,6 +9,10 @@ enum ProviderType: String {
 }
 
 class HomeViewController: UIViewController {
+    
+    // ==================== Labels ====================
+    @IBOutlet var emailTextLabel: UILabel!
+    @IBOutlet var providerTextLabel: UILabel!
     
     // ==================== Objects ====================
     private var alerts = Alerts()
@@ -26,6 +32,10 @@ class HomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        // Establecimiento de las etiquetas en la vista
+        emailTextLabel.text = email
+        providerTextLabel.text = provider?.rawValue
     }
     
     /*

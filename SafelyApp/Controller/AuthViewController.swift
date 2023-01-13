@@ -6,6 +6,22 @@ import FirebaseAuth
 
 class AuthViewController: UIViewController {
 
+    // ==================== Keys ====================
+    struct Keys {
+        static let EMAIL_KEY = "email_key"
+        static let TOKEN_KEY = "access_token"
+    }
+    
+    // ==================== UserData ====================
+    struct UserData {
+        var email: String = ""
+        var password: String = ""
+    }
+    
+    // ==================== General ====================
+    private let userDefaults = UserDefaults.standard
+    private var userData = UserData()
+    
     // ==================== Text fields ====================
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passTextField: UITextField!
@@ -19,14 +35,31 @@ class AuthViewController: UIViewController {
     var user : LoginUserEmail?
     
     // ==================== Methods ====================
+    // MARK: Ciclo de Vida
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Agregamos un evento para analizar cada que un usuario ingresa a la app
-        Analytics.logEvent("InitScreen", parameters: ["message":"Integración de Firebase completa"])
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // Si existen datos de usuario almacenados de logeo, se procede con mostrar la ventana Home
+        if checkIsNotEmptyDataUserLogin() {
+            let email = userDefaults.string(forKey: Keys.EMAIL_KEY)
+            user = LoginUserEmail(email: email!, pType: .basic)
+            self.showHome()
+        }
+    }
+    
+    // MARK: Proceso de inicio de sesión
     @IBAction func loginButtonAction(_ sender: Any) {
+        guard var email = emailTextField.text, var password = passTextField.text else {
+            alert(title: "Error al capturar los datos", message: "Por favor vuelva a ingresar todos los campos")
+            return
+        }
+        userData.email = email
+        userData.password = password
+        
         if validateFields() == true {
             login()
         }
@@ -40,51 +73,90 @@ class AuthViewController: UIViewController {
         present(vc, animated: true)
     }
     
-    func validateFields() -> Bool {
-        let email = emailTextField.text
-        let pass = passTextField.text
+    private func validateFields() -> Bool {
+        let email = userData.email
+        let pass = userData.password
         
-        if email?.isEmpty == true || pass?.isEmpty == true {
-            if email?.isEmpty == true {
-                print("No email text")
+//        if email?.isEmpty == true || pass?.isEmpty == true {
+//            if email?.isEmpty == true && pass?.isEmpty == true {
+        
+        if email.isEmpty == true || pass.isEmpty == true {
+            if email.isEmpty == true && pass.isEmpty == true {
+                alert(title: "Email y contraseña no ingresados", message: "Por favor ingrese todos los campos")
             }
-            
-            if pass?.isEmpty == true {
-                print("No password text")
+            else if email.isEmpty == true {
+                alert(title: "Email no ingresado", message: "Por favor ingrese un email")
             }
-            
+            else {
+                alert(title: "Contraseña no ingresada", message: "Por favor ingrese una contraseña")
+            }
             return false
         }
-        
         return true
     }
     
-    func login() {
+    private func login() {
         // Definicion de los datos del usuario a ingresar al sistema
-        let email = emailTextField.text
-        let password = passTextField.text
+        let email = userData.email
+        let password = userData.password
         
-        user = LoginUserEmail(email: email!, pType: .basic)
-        print("email: \(String(describing: user?.email))")
-        print("password: \(String(describing: password))")
+        user = LoginUserEmail(email: email, pType: .basic)
         
-        Auth.auth().signIn(withEmail: email!, password: password!) { [weak self] authResult, error in
-            //guard let strongSelf = self else { return }
+        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+            //[weak self] authResult
             if let error = error {
                 print("Error: \(error.localizedDescription)")
+                self.alert(title: "Error del servidor", message: "Por el momento contamos con dificultades para iniciar sesión, por favor intentelo más tarde")
             }
-            self!.checkUserInfo()
+            else {
+                self.savedLoginPreferences(email: email)
+                self.showHome()
+            }
         }
     }
     
-    func checkUserInfo() {
-        if Auth.auth().currentUser != nil {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(identifier: "home") as! HomeViewController
-            vc.modalPresentationStyle = .fullScreen
-            vc.userReceived = user
-            present(vc, animated: true, completion: nil)
+    // MARK: Gestionamiento de credenciales de inicio de sesión
+    private func savedLoginPreferences(email: String) {
+        // Obtener el token de acceso
+        Auth.auth().currentUser?.getIDToken { firebaseToken, error in
+            let token = firebaseToken
+            // Guardar el token en UserDefaults
+            let defaults = UserDefaults.standard
+            defaults.set(token, forKey: "access_token")
+            defaults.set(email, forKey: "email_key")
+            defaults.synchronize()
         }
+    }
+    
+    private func checkIsNotEmptyDataUserLogin() -> Bool {
+        guard let email = userDefaults.string(forKey: Keys.EMAIL_KEY),
+              let token = userDefaults.string(forKey: Keys.TOKEN_KEY) else { return false }
+        //print("Email valido: \(email)")
+        //print("Token valido: \(token)")
+        return true
+    }
+    
+    // MARK: Cambio de vista a home
+    private func showHome() {
+        let storyboard = UIStoryboard(name: "ControllerMain", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "home") as! HomeViewController
+        vc.modalPresentationStyle = .fullScreen
+        vc.userReceived = user
+        present(vc, animated: true, completion: nil)
+    }
+    
+    // MARK: Mensajes de alerta
+    private func alert(title: String, message: String) {
+        let alertController = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert
+        )
+        alertController.addAction(UIAlertAction(
+            title: "Aceptar",
+            style: .default)
+        )
+        self.present(alertController, animated: true, completion: nil)
     }
     
 }

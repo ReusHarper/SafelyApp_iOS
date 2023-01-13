@@ -1,11 +1,16 @@
 // ==================== Dependencies ====================
 import UIKit
 import Firebase
-import FirebaseAnalytics
+//import FirebaseAnalytics
 import FirebaseAuth
 
 class SignUpViewController: UIViewController {
 
+    // ==================== General ====================
+    var user : LoginUserEmail?
+    var userCreated : User?
+    private var alerts = Alerts()
+    
     // ==================== Text fields ====================
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var emailTextField: UITextField!
@@ -19,11 +24,6 @@ class SignUpViewController: UIViewController {
     // ==================== Propierties ====================
     private var email : String?
     private var provider : ProviderType? = .basic
-    
-    // ==================== Objects ====================
-    var user : LoginUserEmail?
-    var userCreated : User?
-    private var alerts = Alerts()
     
     // ==================== Methods ====================
     override func viewDidLoad() {
@@ -90,8 +90,8 @@ class SignUpViewController: UIViewController {
     
     func checkUserInfo() {
         if Auth.auth().currentUser != nil {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(identifier: "create") as! CreateViewController
+            let storyboard = UIStoryboard(name: "ControllerMain", bundle: nil)
+            let vc = storyboard.instantiateViewController(identifier: "home") as! HomeViewController
             vc.modalPresentationStyle = .fullScreen
             vc.userReceived = user
             present(vc, animated: true, completion: nil)
@@ -101,6 +101,5 @@ class SignUpViewController: UIViewController {
     @IBAction func loginButtonAction(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    
     
 }

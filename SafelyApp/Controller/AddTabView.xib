@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddTabView" customModule="SafelyApp" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelButton" destination="uja-Xm-9MZ" id="aCA-xo-okE"/>
+                <outlet property="emailTextField" destination="gSv-Pm-Wzn" id="0g4-Nm-wPP"/>
+                <outlet property="infoTextLabel" destination="cqH-R3-eUk" id="yyj-i0-EyF"/>
+                <outlet property="sendButton" destination="R7F-nc-uIh" id="RJk-s8-Flu"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingresa una dirección de correo electrónico para enviar una solicitud de contacto" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cqH-R3-eUk">
+                    <rect key="frame" x="20" y="68" width="374" height="72"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gSv-Pm-Wzn">
+                    <rect key="frame" x="20" y="160" width="374" height="40"/>
+                    <color key="backgroundColor" name="BackgroundColor"/>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="DYA-e8-ryz"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="INm-za-4iQ">
+                    <rect key="frame" x="20" y="220" width="374" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R7F-nc-uIh" customClass="GradientButtonUI" customModule="SafelyApp" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="177" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="OZ6-1S-lJB"/>
+                            </constraints>
+                            <color key="tintColor" name="BackgroundColor"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Enviar"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="firtsColor">
+                                    <color key="value" name="GradientPurpleColor"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                    <color key="value" name="GradientVioletColor"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="transversalGradient" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uja-Xm-9MZ" customClass="GradientButtonUI" customModule="SafelyApp" customModuleProvider="target">
+                            <rect key="frame" x="197" y="0.0" width="177" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="INg-LU-Zjl"/>
+                                <constraint firstAttribute="height" constant="40" id="KfL-mW-W36"/>
+                            </constraints>
+                            <color key="tintColor" name="GradientPurpleColor"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Cancelar"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="firtsColor">
+                                    <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                    <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="transversalGradient" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="897-aQ-asD"/>
+                    </constraints>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOG-Sz-qjL">
+                    <rect key="frame" x="186" y="438" width="42" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" name="BackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="INm-za-4iQ" secondAttribute="trailing" constant="20" id="DSo-e8-0lQ"/>
+                <constraint firstItem="INm-za-4iQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Ffr-w0-DAT"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="cqH-R3-eUk" secondAttribute="trailing" constant="20" id="KY0-rW-irF"/>
+                <constraint firstItem="cqH-R3-eUk" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="VzX-Kc-dKL"/>
+                <constraint firstItem="gSv-Pm-Wzn" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="a91-pU-ScC"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="gSv-Pm-Wzn" secondAttribute="trailing" constant="20" id="cap-IS-ch3"/>
+                <constraint firstItem="gSv-Pm-Wzn" firstAttribute="top" secondItem="cqH-R3-eUk" secondAttribute="bottom" constant="20" id="iD1-O8-zY4"/>
+                <constraint firstItem="cqH-R3-eUk" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="nU3-jl-1vH"/>
+                <constraint firstItem="INm-za-4iQ" firstAttribute="top" secondItem="gSv-Pm-Wzn" secondAttribute="bottom" constant="20" id="vZy-Lp-YJ1"/>
+            </constraints>
+            <point key="canvasLocation" x="73" y="-11"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="R7F-nc-uIh">
+            <size key="intrinsicContentSize" width="70.5" height="34.5"/>
+        </designable>
+        <designable name="uja-Xm-9MZ">
+            <size key="intrinsicContentSize" width="91.5" height="34.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <namedColor name="BackgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GradientPurpleColor">
+            <color red="0.61599999666213989" green="0.69800001382827759" blue="0.97600001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GradientVioletColor">
+            <color red="0.74900001287460327" green="0.65100002288818359" blue="0.97600001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

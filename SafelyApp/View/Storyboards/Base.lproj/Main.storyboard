@@ -134,15 +134,15 @@
             </objects>
             <point key="canvasLocation" x="-924" y="-230"/>
         </scene>
-        <!--Home View Controller-->
+        <!--View Controller-->
         <scene sceneID="yLI-X7-jsr">
             <objects>
-                <viewController storyboardIdentifier="home" id="BMs-ql-JUK" customClass="HomeViewController" customModule="SafelyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="home" id="BMs-ql-JUK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qZ4-la-cFZ">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8Or-Po-GAh">
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8Or-Po-GAh">
                                 <rect key="frame" x="16" y="63" width="358" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHb-Qd-cTh">
@@ -208,20 +208,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="4Ed-il-a5T">
-                                <rect key="frame" x="-2" y="-4" width="387" height="842"/>
+                                <rect key="frame" x="-3" y="-5" width="388" height="842"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crea tu cuenta" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XrJ-5r-tI8">
-                                        <rect key="frame" x="16" y="97" width="355" height="37"/>
+                                        <rect key="frame" x="16" y="97" width="356" height="37"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="32"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="7cX-1x-Nhi">
-                                        <rect key="frame" x="16" y="230" width="355" height="332"/>
+                                        <rect key="frame" x="16" y="230" width="356" height="332"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P6K-I6-hw8" userLabel="Name Text Field">
-                                                <rect key="frame" x="0.0" y="0.0" width="355" height="38"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="356" height="38"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="38" id="HCh-xg-Thh"/>
                                                 </constraints>
@@ -229,7 +229,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="usuario@mail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vdU-xP-FtZ" userLabel="Email Text Field">
-                                                <rect key="frame" x="0.0" y="54" width="355" height="38"/>
+                                                <rect key="frame" x="0.0" y="54" width="356" height="38"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="38" id="F6G-wV-vDS"/>
                                                 </constraints>
@@ -237,7 +237,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C9y-gZ-yIO" userLabel="Password Text Field">
-                                                <rect key="frame" x="0.0" y="108" width="355" height="38"/>
+                                                <rect key="frame" x="0.0" y="108" width="356" height="38"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="38" id="bBA-J3-1l3"/>
                                                 </constraints>
@@ -245,7 +245,7 @@
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="repite la contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Fy-ME-sKT" userLabel="Repeat Password Text Field">
-                                                <rect key="frame" x="0.0" y="162" width="355" height="38"/>
+                                                <rect key="frame" x="0.0" y="162" width="356" height="38"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="38" id="hJb-Mn-Fbk"/>
                                                 </constraints>
@@ -253,10 +253,10 @@
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="new-password"/>
                                             </textField>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="zQr-Ey-ejE">
-                                                <rect key="frame" x="0.0" y="216" width="355" height="116"/>
+                                                <rect key="frame" x="0.0" y="216" width="356" height="116"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1AE-L2-K5l" userLabel="CloseSession Button" customClass="GradientButtonUI" customModule="SafelyApp" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="355" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="356" height="50"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Crear cuenta"/>
@@ -277,7 +277,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lFA-EY-NfC">
-                                                        <rect key="frame" x="0.0" y="66" width="355" height="50"/>
+                                                        <rect key="frame" x="0.0" y="66" width="356" height="50"/>
                                                         <color key="tintColor" name="GradientPurpleColor"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Ya tienes una cuenta? Inicia Sesión"/>
@@ -334,70 +334,6 @@
             </objects>
             <point key="canvasLocation" x="-924" y="512"/>
         </scene>
-        <!--Create View Controller-->
-        <scene sceneID="lZg-zN-gsK">
-            <objects>
-                <viewController storyboardIdentifier="create" id="kJP-l3-IIz" customClass="CreateViewController" customModule="SafelyApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hf3-ef-OfS">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jnA-cJ-qRa">
-                                <rect key="frame" x="16" y="63" width="358" height="100"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D66-jy-gyy">
-                                        <rect key="frame" x="0.0" y="0.0" width="358" height="21.333333333333332"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7mg-dG-q9I">
-                                        <rect key="frame" x="0.0" y="31.333333333333329" width="358" height="21.333333333333329"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtn-fk-g29" customClass="GradientButtonUI" customModule="SafelyApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="62.666666666666671" width="358" height="37.333333333333329"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Cerraar sesión"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="firtsColor">
-                                                <color key="value" name="GradientPurpleColor"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
-                                                <color key="value" name="GradientVioletColor"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="JWi-8I-pN1"/>
-                                </constraints>
-                            </stackView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="jkT-oj-ZLW"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="jkT-oj-ZLW" firstAttribute="trailing" secondItem="jnA-cJ-qRa" secondAttribute="trailing" constant="16" id="8uD-oL-mAg"/>
-                            <constraint firstItem="jnA-cJ-qRa" firstAttribute="leading" secondItem="jkT-oj-ZLW" secondAttribute="leading" constant="16" id="hG7-8V-Arg"/>
-                            <constraint firstItem="jnA-cJ-qRa" firstAttribute="top" secondItem="jkT-oj-ZLW" secondAttribute="top" constant="16" id="n0M-z3-Ic8"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="SHp-wL-LpH"/>
-                    <connections>
-                        <outlet property="emailTextLabel" destination="D66-jy-gyy" id="sNS-hq-W7B"/>
-                        <outlet property="providerTextLabel" destination="7mg-dG-q9I" id="clX-bQ-Jd4"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3MY-Yv-VTM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="160" y="514"/>
-        </scene>
     </scenes>
     <designables>
         <designable name="1AE-L2-K5l">
@@ -408,9 +344,6 @@
         </designable>
         <designable name="HQE-3Z-Vpp">
             <size key="intrinsicContentSize" width="259.33333333333331" height="34.333333333333336"/>
-        </designable>
-        <designable name="wtn-fk-g29">
-            <size key="intrinsicContentSize" width="134.66666666666666" height="34.333333333333336"/>
         </designable>
         <designable name="yiy-EW-9a5">
             <size key="intrinsicContentSize" width="86.333333333333329" height="34.333333333333336"/>
