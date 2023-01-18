@@ -23,6 +23,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     private var locationCurrent: CLLocation = CLLocation()
     private var changeTypeMap: Bool = false
     
+    @IBOutlet var viewPrueba: UIView!
+    
     // Prueba de Google Maps
     private var camera : GMSCameraPosition?
     //private var mapView : GMSMapView?
@@ -30,7 +32,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     // ==================== Buttons ====================
     @IBOutlet var menuButton: GradientButtonUI!
-    @IBOutlet var sideMenuButton: UIBarButtonItem!
     @IBOutlet var alertsButton: GradientButtonUI!
     @IBOutlet var markerButton: GradientButtonUI!
     @IBOutlet var typeMapButton: GradientButtonUI!
@@ -71,19 +72,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         mapView?.isHidden = false
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        
-        //let touch = touches.first!
-        /*
-        if touch.view == menuView {
-            //menuView.isHidden = true
-            print("dentro")
-        } else {
-            print("fuera")
-        }
-        */
-    }
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        let touch = touches.first!
+//        let touchView = touch.view
+//        let touchPosition = Int(truncating: touch.location(in: self.view) as! NSNumber)
+//    }
     
     // MARK: Solicitud de permisos
     private func requestPermissions() {
@@ -188,4 +181,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         print("Menu lateral")
     }
     
+    // MARK: Cambio de vista a Emergency
+    @IBAction func showEmergencyView(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Emergency", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "EmergencyID")
+        vc.modalPresentationStyle = .fullScreen
+        //vc.userReceived = user
+        present(vc, animated: true, completion: nil)
+    }
 }

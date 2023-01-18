@@ -139,6 +139,9 @@
                                         <real key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="showEmergencyView:" destination="JQu-X1-tco" eventType="touchUpInside" id="hb4-py-Pt8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Oho-lJ-RiJ"/>
