@@ -113,7 +113,7 @@
                                 <rect key="frame" x="0.0" y="188" width="414" height="625"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nNT-Zq-CYI">
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nNT-Zq-CYI" customClass="RequestTabView" customModule="SafelyApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="625"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

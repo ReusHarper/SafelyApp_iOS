@@ -1,21 +1,125 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="RequestListCell" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="requestCell" rowHeight="120" id="4oN-eJ-jFO" customClass="RequestListCell" customModule="SafelyApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="122"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4oN-eJ-jFO" id="fHt-to-g73">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="122"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar.png" translatesAutoresizingMaskIntoConstraints="NO" id="pbs-Xa-JvM">
+                        <rect key="frame" x="20" y="10" width="100" height="102"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="o5M-Nm-Huk"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jx7-yg-0t8">
+                        <rect key="frame" x="130" y="20" width="170" height="24"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yj-xb-HLw">
+                        <rect key="frame" x="130" y="54" width="170" height="18.666666666666671"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xmI-jS-uEW" customClass="GradientButtonUI" customModule="SafelyApp" customModuleProvider="target">
+                        <rect key="frame" x="216" y="77.666666666666671" width="84" height="34.333333333333329"/>
+                        <color key="tintColor" name="GradientPurpleColor"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="Eliminar"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="firtsColor">
+                                <color key="value" name="BackgroundColor"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                <color key="value" name="BackgroundColor"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="transversalGradient" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="25O-M7-a8q" customClass="GradientButtonUI" customModule="SafelyApp" customModuleProvider="target">
+                        <rect key="frame" x="122" y="77.666666666666671" width="84" height="34.333333333333329"/>
+                        <color key="tintColor" name="BackgroundColor"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="Aceptar"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="firtsColor">
+                                <color key="value" name="GradientPurpleColor"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                <color key="value" name="GradientVioletColor"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="transversalGradient" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" name="BackgroundColor"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="xmI-jS-uEW" secondAttribute="bottom" constant="10" id="91O-bA-Coo"/>
+                    <constraint firstItem="Jx7-yg-0t8" firstAttribute="leading" secondItem="pbs-Xa-JvM" secondAttribute="trailing" constant="10" id="ALa-So-ZiO"/>
+                    <constraint firstItem="Jx7-yg-0t8" firstAttribute="top" secondItem="fHt-to-g73" secondAttribute="top" constant="20" id="Aax-6P-BDk"/>
+                    <constraint firstAttribute="bottom" secondItem="pbs-Xa-JvM" secondAttribute="bottom" constant="10" id="Gq7-Iu-zrt"/>
+                    <constraint firstAttribute="trailing" secondItem="Jx7-yg-0t8" secondAttribute="trailing" constant="20" id="KQI-7M-7Y1"/>
+                    <constraint firstItem="6yj-xb-HLw" firstAttribute="top" secondItem="Jx7-yg-0t8" secondAttribute="bottom" constant="10" id="Nzs-3F-tLx"/>
+                    <constraint firstItem="pbs-Xa-JvM" firstAttribute="leading" secondItem="fHt-to-g73" secondAttribute="leading" constant="20" id="ZNj-u1-QI7"/>
+                    <constraint firstAttribute="trailing" secondItem="xmI-jS-uEW" secondAttribute="trailing" constant="20" id="aEG-8E-AAf"/>
+                    <constraint firstItem="pbs-Xa-JvM" firstAttribute="top" secondItem="fHt-to-g73" secondAttribute="top" constant="10" id="cbA-70-W5p"/>
+                    <constraint firstAttribute="bottom" secondItem="25O-M7-a8q" secondAttribute="bottom" constant="10" id="j8m-9b-DB7"/>
+                    <constraint firstItem="xmI-jS-uEW" firstAttribute="leading" secondItem="25O-M7-a8q" secondAttribute="trailing" constant="10" id="js3-rw-uik"/>
+                    <constraint firstItem="6yj-xb-HLw" firstAttribute="leading" secondItem="pbs-Xa-JvM" secondAttribute="trailing" constant="10" id="lqZ-8B-Hq3"/>
+                    <constraint firstAttribute="trailing" secondItem="6yj-xb-HLw" secondAttribute="trailing" constant="20" id="usx-ok-EPD"/>
+                </constraints>
             </tableViewCellContentView>
-            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <viewLayoutGuide key="safeArea" id="HFt-gR-qPX"/>
+            <color key="backgroundColor" name="BackgroundColor"/>
+            <connections>
+                <outlet property="acceptButton" destination="25O-M7-a8q" id="rpS-wC-YsG"/>
+                <outlet property="deleteButton" destination="xmI-jS-uEW" id="iGl-Rh-bhk"/>
+                <outlet property="emailTextLabel" destination="6yj-xb-HLw" id="atw-LC-2OC"/>
+                <outlet property="nameTextLabel" destination="Jx7-yg-0t8" id="McS-oc-BUi"/>
+                <outlet property="requestImageView" destination="pbs-Xa-JvM" id="ovy-eS-OSI"/>
+            </connections>
+            <point key="canvasLocation" x="1.5267175572519083" y="-11.267605633802818"/>
         </tableViewCell>
     </objects>
+    <designables>
+        <designable name="25O-M7-a8q">
+            <size key="intrinsicContentSize" width="83.666666666666671" height="34.333333333333336"/>
+        </designable>
+        <designable name="xmI-jS-uEW">
+            <size key="intrinsicContentSize" width="84" height="34.333333333333336"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="avatar.png" width="200" height="200"/>
+        <namedColor name="BackgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GradientPurpleColor">
+            <color red="0.61599999666213989" green="0.69800001382827759" blue="0.97600001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GradientVioletColor">
+            <color red="0.74900001287460327" green="0.65100002288818359" blue="0.97600001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

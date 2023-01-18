@@ -6,9 +6,7 @@ class AddGroupViewController: UIViewController {
     // ==================== Views ====================
     @IBOutlet var contactView: ContactsTabView!
     @IBOutlet var addView: AddTabView!
-    ///////////////////////////////////////////////////////////////////////////////////////////////
-    @IBOutlet weak var requestView: ContactsTabView!
-    ///////////////////////////////////////////////////////////////////////////////////////////////
+    @IBOutlet var requestView: RequestTabView!
     
     // ==================== Buttons ====================
     @IBOutlet var contactsButton: UIButton!
@@ -93,7 +91,7 @@ class AddGroupViewController: UIViewController {
     private func showViews() {
         showViewContacts()
         showViewAddContacts()
-        //showViewRequest()
+        showViewRequest()
     }
     
     func showViewContacts() {
@@ -120,13 +118,10 @@ class AddGroupViewController: UIViewController {
         viewAddContacts.cancelButton.layer.borderColor = borderColor?.cgColor
     }
     
-//    private func showViewRequest() {
-//        let viewRequest = RequestTabView()
-//        self.requestView.addSubview(viewRequest)
-//        viewRequest.frame = self.requestView.bounds
-//
-//        // Init custom elements
-//        viewRequest.configureTableView()
-//    }
+    private func showViewRequest() {
+        let viewRequest = RequestTabView()
+        self.requestView.addSubview(viewRequest)
+        viewRequest.frame = self.requestView.bounds
+    }
     
 }

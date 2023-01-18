@@ -6,7 +6,7 @@ struct RequestModel {
     var username : String
     var email : String
     
-    static func getListRequest() -> [RequestModel] {
+    static func getList() -> [RequestModel] {
         let list = [
             RequestModel(username: "Javier", email: "xavi@mail.com"),
             RequestModel(username: "Fabian", email: "fabian@mail.com"),
@@ -14,7 +14,7 @@ struct RequestModel {
             RequestModel(username: "Luke", email: "luke@mail.com"),
             RequestModel(username: "Pepe", email: "pepe@mail.com"),
         ]
-        return list
+        return (list+list)
     }
     
 }

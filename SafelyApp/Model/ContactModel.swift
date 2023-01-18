@@ -14,7 +14,7 @@ struct ContactModel {
             ContactModel(username: "Asta", email: "kabasta@mail.com"),
             ContactModel(username: "Leo", email: "leo@mail.com"),
         ]
-        return list
+        return (list+list)
     }
     
 }

@@ -45,6 +45,9 @@
 		A2AB313A294A862400761461 /* CustomTabBarUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AB3139294A862400761461 /* CustomTabBarUI.swift */; };
 		A2AE98D7294B856A004AE824 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2AE98D6294B856A004AE824 /* Onboarding.storyboard */; };
 		A2AE98DB294B8678004AE824 /* ControllerMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2AE98DA294B8678004AE824 /* ControllerMain.storyboard */; };
+		A2B76C6729786E5000EC2BBF /* RequestTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B76C6629786E5000EC2BBF /* RequestTabView.swift */; };
+		A2B76C692978708500EC2BBF /* RequestTabView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2B76C682978708500EC2BBF /* RequestTabView.xib */; };
+		A2B76C6B2978793700EC2BBF /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = A2B76C6A2978793700EC2BBF /* avatar.png */; };
 		A2D5144B294A4CE300A87BB9 /* style_dark.json in Resources */ = {isa = PBXBuildFile; fileRef = A2D5144A294A4CE300A87BB9 /* style_dark.json */; };
 		A2D5144D294A528500A87BB9 /* CustomTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D5144C294A528500A87BB9 /* CustomTabBarViewController.swift */; };
 		A2F01B5A2972189C004548EA /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F01B592972189C004548EA /* ContactModel.swift */; };
@@ -100,6 +103,9 @@
 		A2AB3139294A862400761461 /* CustomTabBarUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarUI.swift; sourceTree = "<group>"; };
 		A2AE98D6294B856A004AE824 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		A2AE98DA294B8678004AE824 /* ControllerMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ControllerMain.storyboard; sourceTree = "<group>"; };
+		A2B76C6629786E5000EC2BBF /* RequestTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTabView.swift; sourceTree = "<group>"; };
+		A2B76C682978708500EC2BBF /* RequestTabView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RequestTabView.xib; sourceTree = "<group>"; };
+		A2B76C6A2978793700EC2BBF /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar.png; sourceTree = "<group>"; };
 		A2D5144A294A4CE300A87BB9 /* style_dark.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = style_dark.json; sourceTree = "<group>"; };
 		A2D5144C294A528500A87BB9 /* CustomTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarViewController.swift; sourceTree = "<group>"; };
 		A2F01B592972189C004548EA /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
@@ -142,6 +148,7 @@
 		A24FA7E6296797A700556566 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A2B76C6A2978793700EC2BBF /* avatar.png */,
 				A24FA7E7296797F500556566 /* safely_color.png */,
 				A24FA7EA296797F500556566 /* safely_horizontal_color.png */,
 				A24FA7EB296797F600556566 /* safely_horizontal_monocromatico.png */,
@@ -213,6 +220,8 @@
 				A27A35FD2977CDB000D99FFA /* ContactListCell.xib */,
 				A207B2FD296E28B000A04314 /* AddTabView.swift */,
 				A207B2FB296E289300A04314 /* AddTabView.xib */,
+				A2B76C6629786E5000EC2BBF /* RequestTabView.swift */,
+				A2B76C682978708500EC2BBF /* RequestTabView.xib */,
 				A260E20129776ACC004AB659 /* RequestListCell.swift */,
 				A260E20229776ACC004AB659 /* RequestListCell.xib */,
 			);
@@ -344,6 +353,7 @@
 				A259E6222916294200399D41 /* LaunchScreen.storyboard in Resources */,
 				A2F983ED29173CE1006DFC59 /* GoogleService-Info.plist in Resources */,
 				A24FA7EF296797F600556566 /* safely_vertical_monocromatico.png in Resources */,
+				A2B76C692978708500EC2BBF /* RequestTabView.xib in Resources */,
 				A24FA7F1296797F600556566 /* safely_horizontal_monocromatico.png in Resources */,
 				A26A74C1294B92A8004FDBB8 /* Map.storyboard in Resources */,
 				A26A74C3294B93E4004FDBB8 /* Add.storyboard in Resources */,
@@ -352,6 +362,7 @@
 				A24FA7F0296797F600556566 /* safely_horizontal_color.png in Resources */,
 				A2AE98D7294B856A004AE824 /* Onboarding.storyboard in Resources */,
 				A2D5144B294A4CE300A87BB9 /* style_dark.json in Resources */,
+				A2B76C6B2978793700EC2BBF /* avatar.png in Resources */,
 				A26A74C5294B9467004FDBB8 /* Devices.storyboard in Resources */,
 				A259E61D2916294000399D41 /* Main.storyboard in Resources */,
 				A260E20429776ACC004AB659 /* RequestListCell.xib in Resources */,
@@ -411,6 +422,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2B76C6729786E5000EC2BBF /* RequestTabView.swift in Sources */,
 				A2191855292EC07D002FC668 /* User.swift in Sources */,
 				A2F98433291751D0006DFC59 /* AuthViewController.swift in Sources */,
 				A207B2FE296E28B000A04314 /* AddTabView.swift in Sources */,
