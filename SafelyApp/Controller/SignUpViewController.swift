@@ -91,7 +91,7 @@ class SignUpViewController: UIViewController {
     func checkUserInfo() {
         if Auth.auth().currentUser != nil {
             let storyboard = UIStoryboard(name: "ControllerMain", bundle: nil)
-            let vc = storyboard.instantiateViewController(identifier: "home") as! HomeViewController
+            let vc = storyboard.instantiateViewController(identifier: "HomeID") as! HomeViewController
             vc.modalPresentationStyle = .fullScreen
             vc.userReceived = user
             present(vc, animated: true, completion: nil)

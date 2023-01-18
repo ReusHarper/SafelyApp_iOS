@@ -136,12 +136,12 @@ class AuthViewController: UIViewController {
         return true
     }
     
-    // MARK: Cambio de vista a home
+    // MARK: Cambio de vista a inicial (Map)
     private func showHome() {
         let storyboard = UIStoryboard(name: "ControllerMain", bundle: nil)
-        let vc = storyboard.instantiateViewController(identifier: "home") as! HomeViewController
+        let vc = storyboard.instantiateViewController(identifier: "HomeID")
         vc.modalPresentationStyle = .fullScreen
-        vc.userReceived = user
+        //vc.userReceived = user
         present(vc, animated: true, completion: nil)
     }
     

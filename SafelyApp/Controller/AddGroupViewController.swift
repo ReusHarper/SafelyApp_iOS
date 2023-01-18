@@ -4,9 +4,11 @@ import UIKit
 class AddGroupViewController: UIViewController {
     
     // ==================== Views ====================
-    @IBOutlet weak var contactView: ContactsTabView!
-    @IBOutlet weak var addView: AddTabView!
-    @IBOutlet weak var requestView: RequestTabView!
+    @IBOutlet var contactView: ContactsTabView!
+    @IBOutlet var addView: AddTabView!
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+    @IBOutlet weak var requestView: ContactsTabView!
+    ///////////////////////////////////////////////////////////////////////////////////////////////
     
     // ==================== Buttons ====================
     @IBOutlet var contactsButton: UIButton!
@@ -24,8 +26,6 @@ class AddGroupViewController: UIViewController {
         
         showViews()
         showView(nameView: "contact")
-        
-        //customElementsAdd()
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -93,10 +93,10 @@ class AddGroupViewController: UIViewController {
     private func showViews() {
         showViewContacts()
         showViewAddContacts()
-        showViewRequest()
+        //showViewRequest()
     }
     
-    private func showViewContacts() {
+    func showViewContacts() {
         let viewContacts = ContactsTabView()
         self.contactView.addSubview(viewContacts)
         viewContacts.frame = self.contactView.bounds
@@ -120,10 +120,13 @@ class AddGroupViewController: UIViewController {
         viewAddContacts.cancelButton.layer.borderColor = borderColor?.cgColor
     }
     
-    private func showViewRequest() {
-        let viewRequest = RequestTabView()
-        self.requestView.addSubview(viewRequest)
-        viewRequest.frame = self.requestView.bounds
-    }
+//    private func showViewRequest() {
+//        let viewRequest = RequestTabView()
+//        self.requestView.addSubview(viewRequest)
+//        viewRequest.frame = self.requestView.bounds
+//
+//        // Init custom elements
+//        viewRequest.configureTableView()
+//    }
     
 }
