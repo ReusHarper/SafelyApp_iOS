@@ -7,6 +7,6 @@ target 'SafelyApp' do
 
   # Pods for SafelyApp
   pod 'GoogleMaps', '7.2.0'
-  pod 'GoogleMaps', '7.2.0'
+  pod 'SideMenu'
 
 end
