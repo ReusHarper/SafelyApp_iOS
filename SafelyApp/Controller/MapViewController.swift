@@ -1,4 +1,5 @@
 // ==================== Dependencies ====================
+import SideMenu
 import UIKit
 import FirebaseAnalytics
 import GoogleMaps
@@ -6,22 +7,24 @@ import CoreLocation
 
 class MapViewController: UIViewController, CLLocationManagerDelegate {
         
+    // ==================== Structs ====================
     struct option {
         var title = String()
         var segue = String()
     }
     
+    // ==================== General ====================
     var options: [option] = [
         option(title: "Account", segue: "goToAccount"),
         option(title: "Groups", segue: "goToGroups"),
         option(title: "Close", segue: "goToLogin")
     ]
-    
-    // ==================== General ====================
+
     private let ZOOM = Float(16.0)
     private var menuState: Bool = false
     private var locationCurrent: CLLocation = CLLocation()
     private var changeTypeMap: Bool = false
+    private var menu: SideMenuNavigationController!
     
     @IBOutlet var viewPrueba: UIView!
     
@@ -48,7 +51,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         mapView?.settings.compassButton = false
         mapView?.settings.indoorPicker = false
         mapView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        
         locationManager.delegate = self
         
         do {
@@ -70,13 +72,19 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         view.addSubview(mapView!)
         view.sendSubviewToBack(mapView!)
         mapView?.isHidden = false
+        
+        // Establecimiento de menu lateral
+        menu = storyboard!.instantiateViewController(withIdentifier: "SideMenuNavigation") as? SideMenuNavigationController
+        menu?.leftSide = true
+        
+        SideMenuManager.default.leftMenuNavigationController = menu
+        SideMenuManager.default.addPanGestureToPresent(toView: self.view)
     }
     
-//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        let touch = touches.first!
-//        let touchView = touch.view
-//        let touchPosition = Int(truncating: touch.location(in: self.view) as! NSNumber)
-//    }
+    // MARK: Visualizacion de menu lateral
+    @IBAction func menuAction(_ sender: Any) {
+        present(menu!, animated: true)
+    }
     
     // MARK: Solicitud de permisos
     private func requestPermissions() {
