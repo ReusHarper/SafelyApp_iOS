@@ -15,7 +15,6 @@
 		A213BB94297A169A00F3A4D0 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A213BB93297A169A00F3A4D0 /* AccountViewController.swift */; };
 		A2191855292EC07D002FC668 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2191854292EC07D002FC668 /* User.swift */; };
 		A23D7A1C2978E88400995489 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23D7A1B2978E88400995489 /* SideMenuViewController.swift */; };
-		A23D7A1E2978E9AB00995489 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23D7A1D2978E9AB00995489 /* ViewController.swift */; };
 		A23D7A212978F0EA00995489 /* SideMenuListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23D7A1F2978F0EA00995489 /* SideMenuListCell.swift */; };
 		A23D7A222978F0EA00995489 /* SideMenuListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A23D7A202978F0EA00995489 /* SideMenuListCell.xib */; };
 		A24FA7E5296774F000556566 /* SideMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24FA7E4296774F000556566 /* SideMenuModel.swift */; };
@@ -81,7 +80,6 @@
 		A213BB93297A169A00F3A4D0 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		A2191854292EC07D002FC668 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A23D7A1B2978E88400995489 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
-		A23D7A1D2978E9AB00995489 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A23D7A1F2978F0EA00995489 /* SideMenuListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuListCell.swift; sourceTree = "<group>"; };
 		A23D7A202978F0EA00995489 /* SideMenuListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuListCell.xib; sourceTree = "<group>"; };
 		A24FA7E4296774F000556566 /* SideMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuModel.swift; sourceTree = "<group>"; };
@@ -244,7 +242,6 @@
 				A23D7A1B2978E88400995489 /* SideMenuViewController.swift */,
 				A23D7A1F2978F0EA00995489 /* SideMenuListCell.swift */,
 				A23D7A202978F0EA00995489 /* SideMenuListCell.xib */,
-				A23D7A1D2978E9AB00995489 /* ViewController.swift */,
 				A213BB93297A169A00F3A4D0 /* AccountViewController.swift */,
 			);
 			path = Controller;
@@ -467,7 +464,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A23D7A1E2978E9AB00995489 /* ViewController.swift in Sources */,
 				A2B76C6729786E5000EC2BBF /* RequestTabView.swift in Sources */,
 				A2191855292EC07D002FC668 /* User.swift in Sources */,
 				A2F98433291751D0006DFC59 /* AuthViewController.swift in Sources */,

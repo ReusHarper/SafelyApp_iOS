@@ -50,10 +50,7 @@ class SideMenuViewController: UIViewController {
     
     // MARK: Cambio de vista a inicial (Map)
     private func showHome() {
-        let storyboard = UIStoryboard(name: "ControllerMain", bundle: nil)
-        let vc = storyboard.instantiateViewController(identifier: "HomeID")
-        vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     
     // MARK: Cambio de vista de perfil (Account)
