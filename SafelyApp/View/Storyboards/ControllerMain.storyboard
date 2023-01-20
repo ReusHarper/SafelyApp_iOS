@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -68,54 +67,6 @@
             </objects>
             <point key="canvasLocation" x="950" y="394"/>
         </scene>
-        <!--Side Menu View Controller-->
-        <scene sceneID="f1a-af-kMT">
-            <objects>
-                <viewController id="qpX-7s-Csy" userLabel="Side Menu View Controller" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hbL-D0-4TV">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lHQ-Ji-Div">
-                                <rect key="frame" x="0.0" y="68" width="320" height="128"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="safely_horizontal_color.png" translatesAutoresizingMaskIntoConstraints="NO" id="a4h-ap-sMN" userLabel="Header Image View">
-                                        <rect key="frame" x="20" y="20" width="280" height="88"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" name="GradientPurpleColor"/>
-                                <constraints>
-                                    <constraint firstItem="a4h-ap-sMN" firstAttribute="leading" secondItem="lHQ-Ji-Div" secondAttribute="leading" constant="20" id="9U2-Ml-eOz"/>
-                                    <constraint firstAttribute="trailing" secondItem="a4h-ap-sMN" secondAttribute="trailing" constant="20" id="HQb-f7-Iag"/>
-                                    <constraint firstAttribute="height" constant="128" id="VhB-um-d6p"/>
-                                    <constraint firstItem="a4h-ap-sMN" firstAttribute="top" secondItem="lHQ-Ji-Div" secondAttribute="top" constant="20" id="bHk-4t-7JR"/>
-                                    <constraint firstAttribute="width" constant="320" id="blO-f2-4dl"/>
-                                    <constraint firstAttribute="bottom" secondItem="a4h-ap-sMN" secondAttribute="bottom" constant="20" id="uEr-M9-ArR"/>
-                                </constraints>
-                            </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="V6t-MI-hGm" userLabel="Side Menu Table View">
-                                <rect key="frame" x="0.0" y="196" width="320" height="646"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Rqs-pU-WXY"/>
-                        <color key="backgroundColor" name="GradientPurpleColor"/>
-                        <constraints>
-                            <constraint firstItem="Rqs-pU-WXY" firstAttribute="bottom" secondItem="V6t-MI-hGm" secondAttribute="bottom" constant="20" id="0zu-C4-cW7"/>
-                            <constraint firstItem="Rqs-pU-WXY" firstAttribute="trailing" secondItem="V6t-MI-hGm" secondAttribute="trailing" id="3eB-hV-z4K"/>
-                            <constraint firstItem="V6t-MI-hGm" firstAttribute="top" secondItem="lHQ-Ji-Div" secondAttribute="bottom" id="MfS-N6-hae"/>
-                            <constraint firstItem="lHQ-Ji-Div" firstAttribute="leading" secondItem="Rqs-pU-WXY" secondAttribute="leading" id="Pap-Qh-yfK"/>
-                            <constraint firstItem="V6t-MI-hGm" firstAttribute="leading" secondItem="Rqs-pU-WXY" secondAttribute="leading" id="X9j-VB-Rkj"/>
-                            <constraint firstItem="Rqs-pU-WXY" firstAttribute="trailing" secondItem="lHQ-Ji-Div" secondAttribute="trailing" id="bal-y6-uRX"/>
-                            <constraint firstItem="lHQ-Ji-Div" firstAttribute="top" secondItem="Rqs-pU-WXY" secondAttribute="top" constant="20" id="fuj-sv-onW"/>
-                        </constraints>
-                    </view>
-                    <size key="freeformSize" width="320" height="896"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qs8-79-neZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2886" y="-28"/>
-        </scene>
     </scenes>
     <designables>
         <designable name="NHu-1J-K1D">
@@ -123,7 +74,6 @@
         </designable>
     </designables>
     <resources>
-        <image name="safely_horizontal_color.png" width="306" height="92"/>
         <namedColor name="BackgroundColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -133,9 +83,6 @@
         <namedColor name="GradientVioletColor">
             <color red="0.74900001287460327" green="0.65100002288818359" blue="0.97600001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

@@ -188,11 +188,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         present(vc, animated: true, completion: nil)
     }
     
-//    // MARK: Visualizacion de menu lateral
-//    @IBAction func showSideMenu(_ sender: Any) {
-//        print("Menu lateral")
-//    }
-    
     // MARK: Cambio de vista a Emergency
     @IBAction func showEmergencyView(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Emergency", bundle: nil)

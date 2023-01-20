@@ -39,7 +39,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="menuAction:" destination="JQu-X1-tco" eventType="touchUpInside" id="D48-fk-Bot"/>
-                                    <action selector="showSideMenu:" destination="JQu-X1-tco" eventType="touchUpInside" id="dZ9-Pf-eql"/>
                                     <segue destination="EPl-YY-IGX" kind="show" id="dNh-yK-VdA"/>
                                 </connections>
                             </button>
