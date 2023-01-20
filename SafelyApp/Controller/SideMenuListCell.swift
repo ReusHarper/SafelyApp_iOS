@@ -3,6 +3,11 @@ import UIKit
 
 class SideMenuListCell: UITableViewCell {
     
+    // ==================== General ====================
+    private let mainColor = UIColor(named: "GradientPurpleColor")
+    private let secondColor = UIColor(named: "GradientVioletColor")
+    private let tertiaryColor = UIColor(named: "TertiaryColor")
+    
     // ==================== Elements ====================
     @IBOutlet weak var optionImage: UIImageView!
     @IBOutlet weak var optionTextLabel: UILabel!
@@ -15,6 +20,7 @@ class SideMenuListCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+        //backgroundColor = secondColor
     }
 
     func setData(options: optionMenu) {

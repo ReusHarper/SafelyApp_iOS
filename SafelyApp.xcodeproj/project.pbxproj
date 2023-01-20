@@ -11,6 +11,8 @@
 		A207B2FA296E196000A04314 /* ContactsTabView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A207B2F9296E196000A04314 /* ContactsTabView.xib */; };
 		A207B2FC296E289300A04314 /* AddTabView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A207B2FB296E289300A04314 /* AddTabView.xib */; };
 		A207B2FE296E28B000A04314 /* AddTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A207B2FD296E28B000A04314 /* AddTabView.swift */; };
+		A213BB92297A167800F3A4D0 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A213BB91297A167800F3A4D0 /* Account.storyboard */; };
+		A213BB94297A169A00F3A4D0 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A213BB93297A169A00F3A4D0 /* AccountViewController.swift */; };
 		A2191855292EC07D002FC668 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2191854292EC07D002FC668 /* User.swift */; };
 		A23D7A1C2978E88400995489 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23D7A1B2978E88400995489 /* SideMenuViewController.swift */; };
 		A23D7A1E2978E9AB00995489 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23D7A1D2978E9AB00995489 /* ViewController.swift */; };
@@ -75,6 +77,8 @@
 		A207B2F9296E196000A04314 /* ContactsTabView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactsTabView.xib; sourceTree = "<group>"; };
 		A207B2FB296E289300A04314 /* AddTabView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTabView.xib; sourceTree = "<group>"; };
 		A207B2FD296E28B000A04314 /* AddTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTabView.swift; sourceTree = "<group>"; };
+		A213BB91297A167800F3A4D0 /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
+		A213BB93297A169A00F3A4D0 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		A2191854292EC07D002FC668 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A23D7A1B2978E88400995489 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		A23D7A1D2978E9AB00995489 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -241,6 +245,7 @@
 				A23D7A1F2978F0EA00995489 /* SideMenuListCell.swift */,
 				A23D7A202978F0EA00995489 /* SideMenuListCell.xib */,
 				A23D7A1D2978E9AB00995489 /* ViewController.swift */,
+				A213BB93297A169A00F3A4D0 /* AccountViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -278,6 +283,7 @@
 				A26A74C2294B93E4004FDBB8 /* Add.storyboard */,
 				A26A74C4294B9467004FDBB8 /* Devices.storyboard */,
 				A2B76C6C29787AFB00EC2BBF /* Emergency.storyboard */,
+				A213BB91297A167800F3A4D0 /* Account.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -376,6 +382,7 @@
 				A24FA7F1296797F600556566 /* safely_horizontal_monocromatico.png in Resources */,
 				A26A74C1294B92A8004FDBB8 /* Map.storyboard in Resources */,
 				A26A74C3294B93E4004FDBB8 /* Add.storyboard in Resources */,
+				A213BB92297A167800F3A4D0 /* Account.storyboard in Resources */,
 				A23D7A222978F0EA00995489 /* SideMenuListCell.xib in Resources */,
 				A259E61F2916294200399D41 /* Assets.xcassets in Resources */,
 				A28204DB296CBD0300DD8305 /* style_light.json in Resources */,
@@ -468,6 +475,7 @@
 				A28334F7291B143C00D6CE66 /* SignUpViewController.swift in Sources */,
 				A259E61A2916294000399D41 /* MapViewController.swift in Sources */,
 				A2AB313A294A862400761461 /* CustomTabBarUI.swift in Sources */,
+				A213BB94297A169A00F3A4D0 /* AccountViewController.swift in Sources */,
 				A259E6162916294000399D41 /* AppDelegate.swift in Sources */,
 				A259E6182916294000399D41 /* SceneDelegate.swift in Sources */,
 				A260E20329776ACC004AB659 /* RequestListCell.swift in Sources */,
