@@ -182,12 +182,16 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     // MARK: Lista de notificaciones
     @IBAction func getNotifications(_ sender: Any) {
         print("Notificaciones")
+        let storyboard = UIStoryboard(name: "Notifications", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "NotificationID")
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
     }
     
-    // MARK: Visualizacion de menu lateral
-    @IBAction func showSideMenu(_ sender: Any) {
-        print("Menu lateral")
-    }
+//    // MARK: Visualizacion de menu lateral
+//    @IBAction func showSideMenu(_ sender: Any) {
+//        print("Menu lateral")
+//    }
     
     // MARK: Cambio de vista a Emergency
     @IBAction func showEmergencyView(_ sender: Any) {

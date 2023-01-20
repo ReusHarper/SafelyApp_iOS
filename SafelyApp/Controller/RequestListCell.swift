@@ -1,10 +1,4 @@
-//
-//  RequestListCell.swift
-//  SafelyApp
-//
-//  Created by ReusHarper on 17/01/23.
-//
-
+// ==================== Dependencies ====================
 import UIKit
 
 class RequestListCell: UITableViewCell {

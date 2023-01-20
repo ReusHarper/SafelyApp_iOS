@@ -13,6 +13,8 @@
 		A207B2FE296E28B000A04314 /* AddTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A207B2FD296E28B000A04314 /* AddTabView.swift */; };
 		A213BB92297A167800F3A4D0 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A213BB91297A167800F3A4D0 /* Account.storyboard */; };
 		A213BB94297A169A00F3A4D0 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A213BB93297A169A00F3A4D0 /* AccountViewController.swift */; };
+		A213BB96297A5BFE00F3A4D0 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A213BB95297A5BFE00F3A4D0 /* NotificationsViewController.swift */; };
+		A213BB98297A5C8200F3A4D0 /* Notifications.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A213BB97297A5C8200F3A4D0 /* Notifications.storyboard */; };
 		A2191855292EC07D002FC668 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2191854292EC07D002FC668 /* User.swift */; };
 		A23D7A1C2978E88400995489 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23D7A1B2978E88400995489 /* SideMenuViewController.swift */; };
 		A23D7A212978F0EA00995489 /* SideMenuListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23D7A1F2978F0EA00995489 /* SideMenuListCell.swift */; };
@@ -59,6 +61,9 @@
 		A2D5144D294A528500A87BB9 /* CustomTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D5144C294A528500A87BB9 /* CustomTabBarViewController.swift */; };
 		A2F01B5A2972189C004548EA /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F01B592972189C004548EA /* ContactModel.swift */; };
 		A2F40D482973386200895392 /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F40D472973386200895392 /* RequestModel.swift */; };
+		A2F7947A297A5DE90035A622 /* NotificationListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F79478297A5DE90035A622 /* NotificationListCell.swift */; };
+		A2F7947B297A5DE90035A622 /* NotificationListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2F79479297A5DE90035A622 /* NotificationListCell.xib */; };
+		A2F7947D297A611F0035A622 /* NotificationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F7947C297A611F0035A622 /* NotificationsModel.swift */; };
 		A2F983ED29173CE1006DFC59 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2F983EC29173CE1006DFC59 /* GoogleService-Info.plist */; };
 		A2F9842729174953006DFC59 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A2F9842629174953006DFC59 /* FirebaseAnalytics */; };
 		A2F9842929174953006DFC59 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A2F9842829174953006DFC59 /* FirebaseAuth */; };
@@ -78,6 +83,8 @@
 		A207B2FD296E28B000A04314 /* AddTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTabView.swift; sourceTree = "<group>"; };
 		A213BB91297A167800F3A4D0 /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
 		A213BB93297A169A00F3A4D0 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		A213BB95297A5BFE00F3A4D0 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		A213BB97297A5C8200F3A4D0 /* Notifications.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notifications.storyboard; sourceTree = "<group>"; };
 		A2191854292EC07D002FC668 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A23D7A1B2978E88400995489 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		A23D7A1F2978F0EA00995489 /* SideMenuListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuListCell.swift; sourceTree = "<group>"; };
@@ -124,6 +131,9 @@
 		A2D5144C294A528500A87BB9 /* CustomTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarViewController.swift; sourceTree = "<group>"; };
 		A2F01B592972189C004548EA /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
 		A2F40D472973386200895392 /* RequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
+		A2F79478297A5DE90035A622 /* NotificationListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationListCell.swift; sourceTree = "<group>"; };
+		A2F79479297A5DE90035A622 /* NotificationListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationListCell.xib; sourceTree = "<group>"; };
+		A2F7947C297A611F0035A622 /* NotificationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsModel.swift; sourceTree = "<group>"; };
 		A2F983EC29173CE1006DFC59 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A2F98432291751D0006DFC59 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		A2F9843629175C6D006DFC59 /* GradientButtonUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButtonUI.swift; sourceTree = "<group>"; };
@@ -215,6 +225,7 @@
 				A24FA7E4296774F000556566 /* SideMenuModel.swift */,
 				A2F01B592972189C004548EA /* ContactModel.swift */,
 				A2F40D472973386200895392 /* RequestModel.swift */,
+				A2F7947C297A611F0035A622 /* NotificationsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -243,6 +254,9 @@
 				A23D7A1F2978F0EA00995489 /* SideMenuListCell.swift */,
 				A23D7A202978F0EA00995489 /* SideMenuListCell.xib */,
 				A213BB93297A169A00F3A4D0 /* AccountViewController.swift */,
+				A213BB95297A5BFE00F3A4D0 /* NotificationsViewController.swift */,
+				A2F79478297A5DE90035A622 /* NotificationListCell.swift */,
+				A2F79479297A5DE90035A622 /* NotificationListCell.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -281,6 +295,7 @@
 				A26A74C4294B9467004FDBB8 /* Devices.storyboard */,
 				A2B76C6C29787AFB00EC2BBF /* Emergency.storyboard */,
 				A213BB91297A167800F3A4D0 /* Account.storyboard */,
+				A213BB97297A5C8200F3A4D0 /* Notifications.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -381,6 +396,7 @@
 				A26A74C3294B93E4004FDBB8 /* Add.storyboard in Resources */,
 				A213BB92297A167800F3A4D0 /* Account.storyboard in Resources */,
 				A23D7A222978F0EA00995489 /* SideMenuListCell.xib in Resources */,
+				A2F7947B297A5DE90035A622 /* NotificationListCell.xib in Resources */,
 				A259E61F2916294200399D41 /* Assets.xcassets in Resources */,
 				A28204DB296CBD0300DD8305 /* style_light.json in Resources */,
 				A24FA7F0296797F600556566 /* safely_horizontal_color.png in Resources */,
@@ -393,6 +409,7 @@
 				A260E20429776ACC004AB659 /* RequestListCell.xib in Resources */,
 				A207B2FC296E289300A04314 /* AddTabView.xib in Resources */,
 				A24FA7ED296797F600556566 /* safely_color.png in Resources */,
+				A213BB98297A5C8200F3A4D0 /* Notifications.storyboard in Resources */,
 				A27A35FE2977CDB000D99FFA /* ContactListCell.xib in Resources */,
 				A2AE98DB294B8678004AE824 /* ControllerMain.storyboard in Resources */,
 			);
@@ -466,12 +483,14 @@
 			files = (
 				A2B76C6729786E5000EC2BBF /* RequestTabView.swift in Sources */,
 				A2191855292EC07D002FC668 /* User.swift in Sources */,
+				A2F7947D297A611F0035A622 /* NotificationsModel.swift in Sources */,
 				A2F98433291751D0006DFC59 /* AuthViewController.swift in Sources */,
 				A207B2FE296E28B000A04314 /* AddTabView.swift in Sources */,
 				A28334F7291B143C00D6CE66 /* SignUpViewController.swift in Sources */,
 				A259E61A2916294000399D41 /* MapViewController.swift in Sources */,
 				A2AB313A294A862400761461 /* CustomTabBarUI.swift in Sources */,
 				A213BB94297A169A00F3A4D0 /* AccountViewController.swift in Sources */,
+				A2F7947A297A5DE90035A622 /* NotificationListCell.swift in Sources */,
 				A259E6162916294000399D41 /* AppDelegate.swift in Sources */,
 				A259E6182916294000399D41 /* SceneDelegate.swift in Sources */,
 				A260E20329776ACC004AB659 /* RequestListCell.swift in Sources */,
@@ -482,6 +501,7 @@
 				A2F01B5A2972189C004548EA /* ContactModel.swift in Sources */,
 				A28DEF432918A9EE007C310A /* Alerts.swift in Sources */,
 				A23D7A1C2978E88400995489 /* SideMenuViewController.swift in Sources */,
+				A213BB96297A5BFE00F3A4D0 /* NotificationsViewController.swift in Sources */,
 				A24FA7E5296774F000556566 /* SideMenuModel.swift in Sources */,
 				A29387D1296D0BA4002E7E15 /* ContactsTabView.swift in Sources */,
 				A260E1FF29776A15004AB659 /* ContactListCell.swift in Sources */,
