@@ -27,4 +27,13 @@ class AccountViewController: UIViewController {
         cancelButton.layer.borderWidth = 2.0
         cancelButton.layer.borderColor = borderColor?.cgColor
     }
+    
+    @IBAction func acceptAction(_ sender: Any) {
+        print("Aceptar")
+    }
+    
+    @IBAction func cancelAction(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }

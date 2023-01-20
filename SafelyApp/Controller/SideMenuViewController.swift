@@ -86,10 +86,8 @@ extension SideMenuViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //print("Se selecciono la opcion: \(options[indexPath.row])")
-        let selectedCell = tableView.cellForRow(at: indexPath)!
-        selectedCell.backgroundColor = secondColor
         changeView(option: images[indexPath.row])
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {

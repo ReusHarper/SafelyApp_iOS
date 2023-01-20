@@ -81,6 +81,9 @@
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="acceptAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="y7P-7C-k5s"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mez-Rp-V0c" customClass="GradientButtonUI" customModule="SafelyApp" customModuleProvider="target">
                                         <rect key="frame" x="197" y="0.0" width="177" height="50"/>
@@ -101,6 +104,9 @@
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="cancelAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="cpg-1a-XG6"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
