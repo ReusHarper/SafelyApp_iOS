@@ -34,35 +34,14 @@
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7yp-nt-3MC" customClass="GradientButtonUI" customModule="SafelyApp" customModuleProvider="target">
-                        <rect key="frame" x="216" y="77.666666666666671" width="84" height="34.333333333333329"/>
-                        <color key="tintColor" name="BackgroundColor"/>
-                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" title="Eliminar"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="firtsColor">
-                                <color key="value" name="GradientPurpleColor"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
-                                <color key="value" name="GradientVioletColor"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                <real key="value" value="10"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="boolean" keyPath="transversalGradient" value="YES"/>
-                        </userDefinedRuntimeAttributes>
-                    </button>
                 </subviews>
                 <color key="backgroundColor" name="BackgroundColor"/>
                 <constraints>
                     <constraint firstItem="qvp-dC-B5w" firstAttribute="top" secondItem="oa7-9W-fyx" secondAttribute="bottom" constant="10" id="0cC-h9-ZuF"/>
                     <constraint firstAttribute="trailing" secondItem="oa7-9W-fyx" secondAttribute="trailing" constant="20" id="3Qu-PU-Pne"/>
-                    <constraint firstAttribute="bottom" secondItem="7yp-nt-3MC" secondAttribute="bottom" constant="10" id="6yp-XM-3zF"/>
                     <constraint firstItem="oa7-9W-fyx" firstAttribute="top" secondItem="Z7F-n5-2IQ" secondAttribute="top" constant="20" id="GhH-SP-KMk"/>
                     <constraint firstItem="EV3-wz-KDm" firstAttribute="leading" secondItem="Z7F-n5-2IQ" secondAttribute="leading" constant="20" id="Hi7-27-yPS"/>
                     <constraint firstItem="oa7-9W-fyx" firstAttribute="leading" secondItem="EV3-wz-KDm" secondAttribute="trailing" constant="10" id="TP1-fm-LPe"/>
-                    <constraint firstAttribute="trailing" secondItem="7yp-nt-3MC" secondAttribute="trailing" constant="20" id="ciW-65-Xd0"/>
                     <constraint firstItem="EV3-wz-KDm" firstAttribute="top" secondItem="Z7F-n5-2IQ" secondAttribute="top" constant="10" id="jas-N4-FlU"/>
                     <constraint firstAttribute="bottom" secondItem="EV3-wz-KDm" secondAttribute="bottom" constant="10" id="mqu-Nh-VlX"/>
                     <constraint firstAttribute="trailing" secondItem="qvp-dC-B5w" secondAttribute="trailing" constant="20" id="qCX-QO-p3g"/>
@@ -73,28 +52,16 @@
             <color key="backgroundColor" name="BackgroundColor"/>
             <connections>
                 <outlet property="contactImageView" destination="EV3-wz-KDm" id="y0p-uH-Tew"/>
-                <outlet property="deleteButton" destination="7yp-nt-3MC" id="kQb-9F-MKX"/>
                 <outlet property="emailTextLabel" destination="qvp-dC-B5w" id="CWM-e1-IG0"/>
                 <outlet property="nameTextLabel" destination="oa7-9W-fyx" id="xat-3G-Y0y"/>
             </connections>
             <point key="canvasLocation" x="1.5267175572519083" y="-11.267605633802818"/>
         </tableViewCell>
     </objects>
-    <designables>
-        <designable name="7yp-nt-3MC">
-            <size key="intrinsicContentSize" width="84" height="34.333333333333336"/>
-        </designable>
-    </designables>
     <resources>
         <image name="avatar.png" width="200" height="200"/>
         <namedColor name="BackgroundColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="GradientPurpleColor">
-            <color red="0.61599999666213989" green="0.69800001382827759" blue="0.97600001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="GradientVioletColor">
-            <color red="0.74900001287460327" green="0.65100002288818359" blue="0.97600001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

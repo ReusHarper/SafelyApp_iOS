@@ -8,9 +8,6 @@ class ContactListCell: UITableViewCell {
     @IBOutlet var nameTextLabel: UILabel!
     @IBOutlet var emailTextLabel: UILabel!
 
-    // ==================== Buttons ====================
-    @IBOutlet var deleteButton: GradientButtonUI!
-
     // ==================== Methods ====================
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,7 +18,7 @@ class ContactListCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
 
-    func setData(_ contact: ContactModel) {
+    func setData(_ contact: ContactModel, _ indexPath: IndexPath) {
         nameTextLabel.text = contact.username
         emailTextLabel.text = contact.email
     }

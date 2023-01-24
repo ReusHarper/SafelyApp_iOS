@@ -43,8 +43,19 @@ extension NotificationsViewController: UITableViewDataSource, UITableViewDelegat
             return UITableViewCell()
         }
         let notify = NotificationsModel.getList()[indexPath.row]
-        cell.initCustomElements()
         cell.setData(notify)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let delete = UIContextualAction(style: .normal, title: "Eliminar") { _, _, _ in
+            tableView.beginUpdates()
+            NotificationsModel.list.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.endUpdates()
+        }
+        delete.backgroundColor = UIColor(named: "Error")
+        let swipe = UISwipeActionsConfiguration(actions: [delete])
+        return swipe
     }
 }

@@ -8,10 +8,6 @@ class RequestListCell: UITableViewCell {
     @IBOutlet var nameTextLabel: UILabel!
     @IBOutlet var emailTextLabel: UILabel!
 
-    // ==================== Buttons ====================
-    @IBOutlet var acceptButton: GradientButtonUI!
-    @IBOutlet var deleteButton: GradientButtonUI!
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -24,12 +20,5 @@ class RequestListCell: UITableViewCell {
     func setData(_ request: RequestModel) {
         nameTextLabel.text = request.username
         emailTextLabel.text = request.email
-    }
-    
-    func initCustomElements() {
-        let borderColor = UIColor(named: "GradientPurpleColor")
-        
-        deleteButton.layer.borderWidth = 2.0
-        deleteButton.layer.borderColor = borderColor?.cgColor
     }
 }

@@ -44,8 +44,26 @@ extension RequestTabView : UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
         let request = RequestModel.getList()[indexPath.row]
-        cell.initCustomElements()
         cell.setData(request)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let add = UIContextualAction(style: .normal, title: "Agregar") { _, _, _ in
+            tableView.beginUpdates()
+            RequestModel.list.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.endUpdates()
+        }
+        add.backgroundColor = UIColor(named: "Success")
+        let delete = UIContextualAction(style: .normal, title: "Eliminar") { _, _, _ in
+            tableView.beginUpdates()
+            RequestModel.list.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.endUpdates()
+        }
+        delete.backgroundColor = UIColor(named: "Error")
+        let swipe = UISwipeActionsConfiguration(actions: [delete, add])
+        return swipe
     }
 }

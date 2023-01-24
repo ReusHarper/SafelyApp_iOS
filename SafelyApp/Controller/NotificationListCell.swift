@@ -25,16 +25,4 @@ class NotificationListCell: UITableViewCell {
         titleAlertTextLabel.text = notify.username
         infoAlertTextLabel.text = notify.message
     }
-    
-    func initCustomElements() {
-        let borderColor = UIColor(named: "GradientPurpleColor")
-        
-        deleteButton.layer.borderWidth = 2.0
-        deleteButton.layer.borderColor = borderColor?.cgColor
-    }
-    
-    @IBAction func deleteAction(_ sender: Any) {
-        print("Alerta eliminada")
-    }
-    
 }

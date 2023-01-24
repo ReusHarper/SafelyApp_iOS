@@ -95,10 +95,10 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Cancelar"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="firtsColor">
-                                                <color key="value" name="BackgroundColor"/>
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
-                                                <color key="value" name="BackgroundColor"/>
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="10"/>
@@ -153,6 +153,14 @@
             <point key="canvasLocation" x="115" y="-2"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="mez-Rp-V0c">
+            <size key="intrinsicContentSize" width="91.5" height="34.5"/>
+        </designable>
+        <designable name="tG5-S5-roi">
+            <size key="intrinsicContentSize" width="100" height="34.5"/>
+        </designable>
+    </designables>
     <resources>
         <image name="avatar.png" width="200" height="200"/>
         <namedColor name="BackgroundColor">
