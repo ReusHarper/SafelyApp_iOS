@@ -1,10 +1,19 @@
 // ==================== Dependencies ====================
+import FirebaseAuth
+import FirebaseFirestore
 import UIKit
 
 class ContactsTabView: UIView {
+    
+    // ==================== General ====================
+    private let database = Firestore.firestore()
+    private var emails : [String]? = []
+    private var contacts : [ContactModel]?
+    private let user = Auth.auth().currentUser
  
     // ==================== Elements ====================
     @IBOutlet var contactsTableView: UITableView!
+    @IBOutlet var messageWithoutContactTextLabel: UILabel!
     
     // ==================== Methods ====================
     override init(frame: CGRect) {
@@ -17,6 +26,7 @@ class ContactsTabView: UIView {
         super.init(coder: coder)
         viewInit()
         configureTableView()
+        getEmails()
     }
     
     private func viewInit() {
@@ -29,6 +39,46 @@ class ContactsTabView: UIView {
         let nibName = UINib(nibName: "ContactListCell", bundle: nil)
         contactsTableView.register(nibName, forCellReuseIdentifier: "contactCell")
         contactsTableView.reloadData()
+    }
+    
+    private func getEmails() {
+        if let email = user?.email {
+            database.collection("contact").document(String(email)).getDocument {
+                (documentSnapshot, error) in
+                if let document = documentSnapshot, document.exists {
+                    let data = document.data()
+                    self.emails = data!.compactMap { ($0.value as! String) }
+                    //print("Correos obtenidos: \(String(describing: self.emails))")
+                    self.getDataContacts(emails: self.emails!)
+                } else {
+                    self.emails = []
+                }
+            }
+        }
+    }
+    
+    private func getDataContacts(emails: [String]) {
+        if (!emails.isEmpty) {
+            messageWithoutContactTextLabel.isHidden = true
+            emails.forEach { email in
+                getDataWithEmail(email: email)
+            }
+        } else{
+            print("Lista de emails vacia")
+            messageWithoutContactTextLabel.isHidden = false
+        }
+    }
+    
+    private func getDataWithEmail(email: String) {
+        if let email = user?.email {
+            database.collection("users").document(String(email)).getDocument {
+                (documentSnapshot, error) in
+                if let document = documentSnapshot, document.exists {
+                    let name = document.get("name") as! String
+                    print("Name: \(name) - Email \(email)")
+                } 
+            }
+        }
     }
 }
 

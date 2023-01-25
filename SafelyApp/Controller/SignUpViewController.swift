@@ -1,7 +1,5 @@
 // ==================== Dependencies ====================
 import UIKit
-import Firebase
-//import FirebaseAnalytics
 import FirebaseAuth
 
 class SignUpViewController: UIViewController {

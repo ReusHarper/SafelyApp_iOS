@@ -1,6 +1,6 @@
 // ==================== Dependencies ====================
 import UIKit
-import Firebase
+//import Firebase
 import FirebaseAnalytics
 import FirebaseAuth
 
