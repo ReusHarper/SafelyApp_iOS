@@ -22,7 +22,6 @@ class AddGroupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        showViews()
         showView(nameView: "contact")
     }
 

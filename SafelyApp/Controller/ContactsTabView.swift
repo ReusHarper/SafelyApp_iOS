@@ -8,7 +8,7 @@ class ContactsTabView: UIView {
     // ==================== General ====================
     private let database = Firestore.firestore()
     private var emails : [String]? = []
-    private var contacts : [ContactModel]?
+    private var contacts : [ContactModel] = []
     private let user = Auth.auth().currentUser
  
     // ==================== Elements ====================
@@ -20,6 +20,7 @@ class ContactsTabView: UIView {
         super.init(frame: frame)
         viewInit()
         configureTableView()
+        getEmails()
     }
     
     required init?(coder: NSCoder) {
@@ -61,6 +62,7 @@ class ContactsTabView: UIView {
         if (!emails.isEmpty) {
             messageWithoutContactTextLabel.isHidden = true
             emails.forEach { email in
+                print("Email de contacto: \(email)")
                 getDataWithEmail(email: email)
             }
         } else{
@@ -70,32 +72,57 @@ class ContactsTabView: UIView {
     }
     
     private func getDataWithEmail(email: String) {
-        if let email = user?.email {
-            database.collection("users").document(String(email)).getDocument {
-                (documentSnapshot, error) in
-                if let document = documentSnapshot, document.exists {
-                    let name = document.get("name") as! String
-                    print("Name: \(name) - Email \(email)")
-                } 
+        database.collection("users").document(String(email)).getDocument {
+            (documentSnapshot, error) in
+            if let document = documentSnapshot, document.exists {
+                let name = document.get("name") as! String
+                print("Name: \(name) - Email \(email)")
+                self.contacts.append(ContactModel(username: name, email: email))
+                self.contactsTableView.reloadData()
             }
         }
     }
+    
+    private func deleteContact(emailOwner: String, emailContact: String, position: Int) {
+        let _emailContact = setEmailWithCorrectFormat(email: emailContact)
+        print("entra aqui con el email \(String(describing: _emailContact))")
+        contacts.remove(at: position)
+        database.collection("contact").document(String(emailOwner)).updateData(["email_\(_emailContact)": FieldValue.delete()]) { err in
+            if let err = err {
+                print("Error al intentar eliminar el registro: \(err)")
+            } else {
+                print("El usuario \(emailContact) ha sido eliminado con exito")
+            }
+        }
+    }
+    
+    private func setEmailWithCorrectFormat(email: String) -> String {
+        var newEmail = ""
+        for char in email {
+            if char == "." {
+                newEmail.append("_")
+            } else {
+                newEmail.append(char)
+            }
+        }
+        print("Email: \(email)")
+        print("New Email: \(newEmail)")
+        return newEmail
+    }
+    
 }
 
 // ==================== Extensions ====================
 extension ContactsTabView : UITableViewDataSource, UITableViewDelegate {
-    
-    //weak var tableView: ContactsTabView?
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return ContactModel.getList().count
+        return contacts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "contactCell", for: indexPath) as? ContactListCell else {
             return UITableViewCell()
         }
-        let contact = ContactModel.getList()[indexPath.row]
+        let contact = self.contacts[indexPath.row]
         cell.setData(contact, indexPath)
         return cell
     }
@@ -103,7 +130,11 @@ extension ContactsTabView : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let delete = UIContextualAction(style: .normal, title: "Eliminar") { _, _, _ in
             tableView.beginUpdates()
-            ContactModel.list.remove(at: indexPath.row)
+            guard let email = self.user?.email else {
+                tableView.endUpdates()
+                return
+            }
+            self.deleteContact(emailOwner: email, emailContact: self.contacts[indexPath.row].email, position: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             tableView.endUpdates()
         }
