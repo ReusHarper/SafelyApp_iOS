@@ -26,6 +26,10 @@ class AccountViewController: UIViewController {
         
         cancelButton.layer.borderWidth = 2.0
         cancelButton.layer.borderColor = borderColor?.cgColor
+        
+        nameTextLabel.delegate = self
+        emailTextLabel.delegate = self
+        directionsTextLabel.delegate = self
     }
     
     @IBAction func acceptAction(_ sender: Any) {
@@ -36,4 +40,11 @@ class AccountViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+}
+
+extension AccountViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }

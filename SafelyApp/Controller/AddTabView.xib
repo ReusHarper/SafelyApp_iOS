@@ -84,6 +84,9 @@
                                     <real key="value" value="10"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="cancelAction:" destination="-1" eventType="touchUpInside" id="986-PG-Qi9"/>
+                            </connections>
                         </button>
                     </subviews>
                     <constraints>
@@ -93,6 +96,7 @@
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" name="BackgroundColor"/>
+            <accessibility key="accessibilityConfiguration" identifier="view"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="INm-za-4iQ" secondAttribute="trailing" constant="20" id="DSo-e8-0lQ"/>
                 <constraint firstItem="INm-za-4iQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Ffr-w0-DAT"/>

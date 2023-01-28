@@ -124,3 +124,10 @@ class AddGroupViewController: UIViewController {
     }
     
 }
+
+extension AddGroupViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}
