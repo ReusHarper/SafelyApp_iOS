@@ -1,7 +1,8 @@
 import Foundation
 import UIKit
 
-class Alerts: MapViewController {
+//class Alerts: MapViewController {
+class Alerts: UIViewController {
     
     func message(title: String, message: String) {
         let alertController = UIAlertController(
