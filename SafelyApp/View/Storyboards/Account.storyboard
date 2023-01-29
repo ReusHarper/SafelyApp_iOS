@@ -36,7 +36,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEq-Kh-V8U">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Direccion:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEq-Kh-V8U">
                                 <rect key="frame" x="20" y="455.5" width="374" height="23.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <nil key="textColor"/>
@@ -47,7 +47,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dirección:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="55w-XW-Erw">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Telefono:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="55w-XW-Erw">
                                 <rect key="frame" x="20" y="543" width="374" height="23.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <nil key="textColor"/>
@@ -143,9 +143,12 @@
                         <outlet property="acceptButton" destination="tG5-S5-roi" id="JOu-bd-Es0"/>
                         <outlet property="accountImage" destination="PeV-aP-7A1" id="8ci-ye-12S"/>
                         <outlet property="cancelButton" destination="mez-Rp-V0c" id="eSq-pP-mtW"/>
-                        <outlet property="directionsTextLabel" destination="16O-fc-xv2" id="qZa-BK-B7E"/>
-                        <outlet property="emailTextLabel" destination="Vbc-c4-VPR" id="rWf-ZQ-SJI"/>
-                        <outlet property="nameTextLabel" destination="LyZ-TC-6QE" id="fQj-6U-Iq5"/>
+                        <outlet property="directionTextField" destination="Vbc-c4-VPR" id="MBi-LG-CXn"/>
+                        <outlet property="directionTextLabel" destination="WEq-Kh-V8U" id="gDj-hM-qyd"/>
+                        <outlet property="nameTextField" destination="LyZ-TC-6QE" id="W4X-Hp-Ai9"/>
+                        <outlet property="nameTextLabel" destination="Dd1-pm-NCD" id="qah-qf-roX"/>
+                        <outlet property="phoneTextField" destination="16O-fc-xv2" id="osw-cS-PpP"/>
+                        <outlet property="phoneTextLabel" destination="55w-XW-Erw" id="t93-nO-Ja0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
