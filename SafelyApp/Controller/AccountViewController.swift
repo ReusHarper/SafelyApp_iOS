@@ -31,9 +31,6 @@ class AccountViewController: UIViewController {
         customInit()
         getData(email: user?.email)
         
-//        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name: UIKeyboardWillShowNotification, object: nil)
-//        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name: UIKeyboardWillHideNotification, object: nil)
-        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
@@ -98,8 +95,6 @@ class AccountViewController: UIViewController {
     }
     
     private func updateData(email: String?) {
-        let collection = "users"
-
         if (email != nil) {
             let COLLECTION = "users"
             
@@ -111,9 +106,9 @@ class AccountViewController: UIViewController {
             let _ADDRESS = self.directionTextField.text ?? ""
             let _PHONE = self.phoneTextField.text ?? ""
             
-            database.collection(collection).document(email!).getDocument { (document, error) in
+            database.collection(COLLECTION).document(email!).getDocument { (document, error) in
                 if let document = document, document.exists {
-                    self.database.collection(collection).document(email!).updateData([
+                    self.database.collection(COLLECTION).document(email!).updateData([
                         NAME :  _NAME,
                         ADDRESS : _ADDRESS,
                         PHONE : _PHONE
@@ -136,7 +131,7 @@ class AccountViewController: UIViewController {
                         title: "Error de servicio - Datos de cuenta no encontrados",
                         message: "Se detecto un problema con su cuenta, por favor cierre sesión y reinicie la app."
                     )
-                    print("El archivo del usuario \(String(describing: email)) no existe dentro de la coleccion \(collection)")
+                    print("El archivo del usuario \(String(describing: email)) no existe dentro de la coleccion \(COLLECTION)")
                 }
             }
         } else {

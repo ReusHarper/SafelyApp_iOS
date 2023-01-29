@@ -191,9 +191,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     // MARK: Cambio de vista a Emergency
     @IBAction func showEmergencyView(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Emergency", bundle: nil)
-        let vc = storyboard.instantiateViewController(identifier: "EmergencyID")
+        let vc = storyboard.instantiateViewController(identifier: "EmergencyID") as EmergencyViewController
+        vc.location = locationCurrent
         vc.modalPresentationStyle = .fullScreen
-        //vc.userReceived = user
         present(vc, animated: true, completion: nil)
     }
 }
