@@ -4,7 +4,8 @@ import Foundation
 struct NotificationsModel {
     
     var username : String
-    var message : String
+    var message : Any
+    //var message : String
     
     static var list = [
         NotificationsModel(username: "Kevin", message: "San Peter"),

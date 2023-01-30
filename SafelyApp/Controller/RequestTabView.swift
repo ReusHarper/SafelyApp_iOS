@@ -85,8 +85,8 @@ class RequestTabView: UIView {
     
     private func deleteRequest(emailOwner: String, emailRequest: String, position: Int) {
         let _emailRequest = setEmailWithCorrectFormat(email: emailRequest)
-        print("entra aqui con el email \(String(describing: _emailRequest))")
         requests.remove(at: position)
+        
         database.collection("request").document(String(emailOwner)).updateData(["email_\(_emailRequest)": FieldValue.delete()]) { err in
             if let err = err {
                 print("Error al intentar eliminar el registro: \(err)")

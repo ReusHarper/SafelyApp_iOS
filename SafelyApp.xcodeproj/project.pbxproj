@@ -50,6 +50,7 @@
 		A299CFA5292448AF006376C1 /* InputTextLabelUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A299CFA4292448AF006376C1 /* InputTextLabelUI.swift */; };
 		A299CFA829244F90006376C1 /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = A299CFA729244F90006376C1 /* TinyConstraints */; };
 		A299CFAB292451DE006376C1 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = A299CFAA292451DE006376C1 /* Lottie */; };
+		A2A2516929874C2C00FBF146 /* contact.png in Resources */ = {isa = PBXBuildFile; fileRef = A2A2516829874C2C00FBF146 /* contact.png */; };
 		A2AB313A294A862400761461 /* CustomTabBarUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AB3139294A862400761461 /* CustomTabBarUI.swift */; };
 		A2AE98D7294B856A004AE824 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2AE98D6294B856A004AE824 /* Onboarding.storyboard */; };
 		A2AE98DB294B8678004AE824 /* ControllerMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2AE98DA294B8678004AE824 /* ControllerMain.storyboard */; };
@@ -115,6 +116,7 @@
 		A28DEF422918A9EE007C310A /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		A29387CF296D0BA4002E7E15 /* ContactsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTabView.swift; sourceTree = "<group>"; };
 		A299CFA4292448AF006376C1 /* InputTextLabelUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextLabelUI.swift; sourceTree = "<group>"; };
+		A2A2516829874C2C00FBF146 /* contact.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contact.png; sourceTree = "<group>"; };
 		A2AB3139294A862400761461 /* CustomTabBarUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarUI.swift; sourceTree = "<group>"; };
 		A2AE98D6294B856A004AE824 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		A2AE98DA294B8678004AE824 /* ControllerMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ControllerMain.storyboard; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 			children = (
 				A2382608297FA71100540D69 /* alert.png */,
 				A2B76C6A2978793700EC2BBF /* avatar.png */,
+				A2A2516829874C2C00FBF146 /* contact.png */,
 				A24FA7E7296797F500556566 /* safely_color.png */,
 				A24FA7EA296797F500556566 /* safely_horizontal_color.png */,
 				A24FA7EB296797F600556566 /* safely_horizontal_monocromatico.png */,
@@ -374,6 +377,7 @@
 				A24FA7F2296797F600556566 /* safely_monocromatico.png in Resources */,
 				A259E6222916294200399D41 /* LaunchScreen.storyboard in Resources */,
 				A2F983ED29173CE1006DFC59 /* GoogleService-Info.plist in Resources */,
+				A2A2516929874C2C00FBF146 /* contact.png in Resources */,
 				A24FA7EF296797F600556566 /* safely_vertical_monocromatico.png in Resources */,
 				A2B76C692978708500EC2BBF /* RequestTabView.xib in Resources */,
 				A24FA7F1296797F600556566 /* safely_horizontal_monocromatico.png in Resources */,
