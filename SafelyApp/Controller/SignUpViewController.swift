@@ -3,11 +3,25 @@ import UIKit
 import FirebaseAuth
 
 class SignUpViewController: UIViewController {
+    
+    // ==================== Keys ====================
+    struct Keys {
+        static let EMAIL_KEY = "email_key"
+        static let TOKEN_KEY = "access_token"
+    }
+    
+    // ==================== UserData ====================
+    struct UserData {
+        var email: String = ""
+        var password: String = ""
+    }
 
     // ==================== General ====================
     var user : LoginUserEmail?
     var userCreated : User?
     private var alerts = Alerts()
+    private let userDefaults = UserDefaults.standard
+    private var userData = UserData()
     
     // ==================== Text fields ====================
     @IBOutlet var nameTextField: UITextField!
@@ -17,7 +31,7 @@ class SignUpViewController: UIViewController {
     
     // ==================== Buttons ====================
     @IBOutlet var signUpButton: GradientButtonUI!
-    @IBOutlet var logInButton: UIButton!
+    @IBOutlet var logInButton: GradientButtonUI!
     
     // ==================== Propierties ====================
     private var email : String?
@@ -26,6 +40,8 @@ class SignUpViewController: UIViewController {
     // ==================== Methods ====================
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        initCustomElements()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,6 +55,13 @@ class SignUpViewController: UIViewController {
         }
     }
     
+    private func initCustomElements() {
+        let borderColor = UIColor(named: "GradientPurpleColor")
+        
+        logInButton.layer.borderWidth = 2.0
+        logInButton.layer.borderColor = borderColor?.cgColor
+    }
+    
     func validateFields() -> Bool {
         let name = nameTextField.text
         let email = emailTextField.text
@@ -47,27 +70,38 @@ class SignUpViewController: UIViewController {
         
         
         if name?.isEmpty == true || email?.isEmpty == true || pass?.isEmpty == true || passRepeat?.isEmpty == true {
+            if name?.isEmpty == true && email?.isEmpty == true && pass?.isEmpty == true && passRepeat?.isEmpty == true {
+                alert(title: "Información vacía", message: "Por favor ingrese todos los campos")
+            }
             if name?.isEmpty == true {
-                print("No name text")
+                alert(title: "Nombre no ingresado", message: "Por favor ingrese un nombre")
             }
-            
-            if email?.isEmpty == true {
-                print("No email text")
+            else if email?.isEmpty == true {
+                alert(title: "Email no ingresado", message: "Por favor ingrese un email")
             }
-            
-            if pass?.isEmpty == true {
-                print("No password text")
+            else if pass?.isEmpty == true {
+                alert(title: "Contraseña no ingresada", message: "Por favor ingrese una contraseña")
             }
-            
-            if passRepeat?.isEmpty == true {
-                print("No password x2 text")
+            else if passRepeat?.isEmpty == true {
+                alert(title: "Contraseñas distintas", message: "Por favor ingrese ambas contraseñas iguales")
             }
-            
             return false
         }
-        
+        else if (!validateEmail(candidate: email!)) {
+            alert(title: "Email inválido", message: "Por favor verifique el email ingresado ya que no cuenta con un formato válido.")
+            return false
+        }
+        else if (pass != passRepeat) {
+            alert(title: "Contraseñas distintas", message: "Por favor ingrese ambas contraseñas iguales")
+            return false
+        }
         return true
     }
+    
+    private func validateEmail(candidate: String) -> Bool {
+        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        return NSPredicate(format: "SELF MATCHES %@", emailRegex).evaluate(with: candidate)
+     }
     
     func signUp() {
         // Definicion de los datos del usuario a ingresar al sistema
@@ -79,19 +113,45 @@ class SignUpViewController: UIViewController {
         Auth.auth().createUser(withEmail: email!, password: password!) { [weak self] authResult, error in
             //guard let strongSelf = self else { return }
             if let error = error {
-                print(error.localizedDescription)
+                print("Error: \(error.localizedDescription)")
+                self!.alert(title: "Error con la creacion de su cuenta", message: "Por el momento contamos con dificultades para iniciar sesión, por favor intentelo más tarde")
             }
-            
-            self!.checkUserInfo()
+            else {
+                print("Email = \(email!)")
+                print("Password = \(password!)")
+                
+                self!.userData.email = email!
+                self!.userData.password = password!
+                self!.login()
+            }
+        }
+    }
+    
+    private func login() {
+        // Definicion de los datos del usuario a ingresar al sistema
+        let email = userData.email
+        let password = userData.password
+        
+        user = LoginUserEmail(email: email, pType: .basic)
+        
+        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+                self.alert(title: "Error de Inicio de Sesión", message: "Por el momento contamos con dificultades para iniciar sesión en su cuenta, por favor reinicie la app y vuelva a intentarlo.")
+            }
+            else {
+                self.savedLoginPreferences(email: email)
+                self.checkUserInfo()
+            }
         }
     }
     
     func checkUserInfo() {
         if Auth.auth().currentUser != nil {
             let storyboard = UIStoryboard(name: "ControllerMain", bundle: nil)
-            let vc = storyboard.instantiateViewController(identifier: "HomeID") as! HomeViewController
+            let vc = storyboard.instantiateViewController(identifier: "HomeID") //as! HomeViewController
             vc.modalPresentationStyle = .fullScreen
-            vc.userReceived = user
+            //vc.userReceived = user
             present(vc, animated: true, completion: nil)
         }
     }
@@ -100,4 +160,30 @@ class SignUpViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    // MARK: Gestionamiento de credenciales de inicio de sesión
+    private func savedLoginPreferences(email: String) {
+        // Obtener el token de acceso
+        Auth.auth().currentUser?.getIDToken { firebaseToken, error in
+            let token = firebaseToken
+            // Guardar el token en UserDefaults
+            let defaults = UserDefaults.standard
+            defaults.set(token, forKey: "access_token")
+            defaults.set(email, forKey: "email_key")
+            defaults.synchronize()
+        }
+    }
+    
+    // MARK: Mensajes de alerta
+    private func alert(title: String, message: String) {
+        let alertController = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert
+        )
+        alertController.addAction(UIAlertAction(
+            title: "Aceptar",
+            style: .default)
+        )
+        self.present(alertController, animated: true, completion: nil)
+    }
 }

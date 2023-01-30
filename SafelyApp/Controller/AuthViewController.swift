@@ -26,7 +26,7 @@ class AuthViewController: UIViewController {
     
     // ==================== Buttons ====================
     @IBOutlet var loginButton: GradientButtonUI!
-    @IBOutlet var signUpButton: UIButton!
+    @IBOutlet var signUpButton: GradientButtonUI!
     
     // ==================== Objects ====================
     private var alerts = Alerts()
@@ -36,6 +36,8 @@ class AuthViewController: UIViewController {
     // MARK: Ciclo de Vida
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        initCustomElements()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -71,12 +73,16 @@ class AuthViewController: UIViewController {
         present(vc, animated: true)
     }
     
+    private func initCustomElements() {
+        let borderColor = UIColor(named: "GradientPurpleColor")
+        
+        signUpButton.layer.borderWidth = 2.0
+        signUpButton.layer.borderColor = borderColor?.cgColor
+    }
+    
     private func validateFields() -> Bool {
         let email = userData.email
         let pass = userData.password
-        
-//        if email?.isEmpty == true || pass?.isEmpty == true {
-//            if email?.isEmpty == true && pass?.isEmpty == true {
         
         if email.isEmpty == true || pass.isEmpty == true {
             if email.isEmpty == true && pass.isEmpty == true {
@@ -104,7 +110,7 @@ class AuthViewController: UIViewController {
             //[weak self] authResult
             if let error = error {
                 print("Error: \(error.localizedDescription)")
-                self.alert(title: "Error del servidor", message: "Por el momento contamos con dificultades para iniciar sesión, por favor intentelo más tarde")
+                self.alert(title: "Email o contraseña inválida", message: "Verifique los datos ingresados y vuelva a intentarlo.")
             }
             else {
                 self.savedLoginPreferences(email: email)
