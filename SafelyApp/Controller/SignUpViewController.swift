@@ -165,7 +165,6 @@ class SignUpViewController: UIViewController {
     
     private func setData(email: String?) {
         if (!userData.email.isEmpty) {
-            print
             let COLLECTION = "users"
             
             let NAME = "name"
