@@ -143,20 +143,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="4Ed-il-a5T">
-                                <rect key="frame" x="-5" y="-6" width="389" height="842"/>
+                                <rect key="frame" x="-5" y="-7" width="388" height="842"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crea tu cuenta" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XrJ-5r-tI8">
-                                        <rect key="frame" x="16" y="97" width="357" height="37"/>
+                                        <rect key="frame" x="16" y="97" width="356" height="37"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="32"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="7cX-1x-Nhi">
-                                        <rect key="frame" x="16" y="230" width="357" height="332"/>
+                                        <rect key="frame" x="16" y="230" width="356" height="332"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P6K-I6-hw8" userLabel="Name Text Field">
-                                                <rect key="frame" x="0.0" y="0.0" width="357" height="38"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P6K-I6-hw8" userLabel="Name Text Field">
+                                                <rect key="frame" x="0.0" y="0.0" width="356" height="38"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="38" id="HCh-xg-Thh"/>
                                                 </constraints>
@@ -164,23 +164,23 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="usuario@mail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vdU-xP-FtZ" userLabel="Email Text Field">
-                                                <rect key="frame" x="0.0" y="54" width="357" height="38"/>
+                                                <rect key="frame" x="0.0" y="54" width="356" height="38"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="38" id="F6G-wV-vDS"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C9y-gZ-yIO" userLabel="Password Text Field">
-                                                <rect key="frame" x="0.0" y="108" width="357" height="38"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C9y-gZ-yIO" userLabel="Password Text Field">
+                                                <rect key="frame" x="0.0" y="108" width="356" height="38"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="38" id="bBA-J3-1l3"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="repite la contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Fy-ME-sKT" userLabel="Repeat Password Text Field">
-                                                <rect key="frame" x="0.0" y="162" width="357" height="38"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repite la contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Fy-ME-sKT" userLabel="Repeat Password Text Field">
+                                                <rect key="frame" x="0.0" y="162" width="356" height="38"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="38" id="hJb-Mn-Fbk"/>
                                                 </constraints>
@@ -188,10 +188,10 @@
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="new-password"/>
                                             </textField>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="zQr-Ey-ejE">
-                                                <rect key="frame" x="0.0" y="216" width="357" height="116"/>
+                                                <rect key="frame" x="0.0" y="216" width="356" height="116"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1AE-L2-K5l" userLabel="CloseSession Button" customClass="GradientButtonUI" customModule="SafelyApp" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="357" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="356" height="50"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Crear cuenta"/>
@@ -212,7 +212,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lFA-EY-NfC" customClass="GradientButtonUI" customModule="SafelyApp" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="66" width="357" height="50"/>
+                                                        <rect key="frame" x="0.0" y="66" width="356" height="50"/>
                                                         <color key="tintColor" name="GradientPurpleColor"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Ya tienes una cuenta? Inicia Sesión"/>
@@ -287,6 +287,9 @@
         </designable>
         <designable name="HQE-3Z-Vpp">
             <size key="intrinsicContentSize" width="259.33333333333331" height="34.333333333333336"/>
+        </designable>
+        <designable name="lFA-EY-NfC">
+            <size key="intrinsicContentSize" width="288.66666666666669" height="34.333333333333336"/>
         </designable>
         <designable name="yiy-EW-9a5">
             <size key="intrinsicContentSize" width="86.333333333333329" height="34.333333333333336"/>

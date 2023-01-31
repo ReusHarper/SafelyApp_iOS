@@ -1,6 +1,7 @@
 // ==================== Dependencies ====================
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
 
 class SignUpViewController: UIViewController {
     
@@ -14,6 +15,7 @@ class SignUpViewController: UIViewController {
     struct UserData {
         var email: String = ""
         var password: String = ""
+        var name: String = ""
     }
 
     // ==================== General ====================
@@ -22,6 +24,7 @@ class SignUpViewController: UIViewController {
     private var alerts = Alerts()
     private let userDefaults = UserDefaults.standard
     private var userData = UserData()
+    private let database = Firestore.firestore()
     
     // ==================== Text fields ====================
     @IBOutlet var nameTextField: UITextField!
@@ -107,6 +110,7 @@ class SignUpViewController: UIViewController {
         // Definicion de los datos del usuario a ingresar al sistema
         let email = emailTextField.text
         let password = passwordTextField.text
+        let name = nameTextField.text
         
         user = LoginUserEmail(email: email!, pType: .basic)
         
@@ -119,9 +123,12 @@ class SignUpViewController: UIViewController {
             else {
                 print("Email = \(email!)")
                 print("Password = \(password!)")
+                print("Name = \(name!)")
                 
                 self!.userData.email = email!
                 self!.userData.password = password!
+                self!.userData.name = name!
+                self!.setData(email: self!.user!.email)
                 self!.login()
             }
         }
@@ -153,6 +160,36 @@ class SignUpViewController: UIViewController {
             vc.modalPresentationStyle = .fullScreen
             //vc.userReceived = user
             present(vc, animated: true, completion: nil)
+        }
+    }
+    
+    private func setData(email: String?) {
+        if (!userData.email.isEmpty) {
+            print
+            let COLLECTION = "users"
+            
+            let NAME = "name"
+            let _NAME = userData.name
+            let data : [String : String] = [NAME :  _NAME]
+            
+            database.collection(COLLECTION).document(email!).getDocument { (document, error) in
+                self.database.collection(COLLECTION).document(self.userData.email).setData(data) { (error) in
+                    if let error = error {
+                        print("Error al agregar el documento: \(error)")
+                        self.alert(
+                            title: "Error de servicio - Problema con registro de cuenta",
+                            message: "Se detecto un problema con su cuenta, por favor reinicie la app y vuelva a intentarlo."
+                        )
+                    } else {
+                        print("Documento agregado con éxito")
+                    }
+                }
+            }
+        } else {
+            self.alert(
+                title: "Error de servicio - Problema con cuenta de email",
+                message: "Se detecto un problema con su cuenta, por favor cierre sesión y reinicie la app."
+            )
         }
     }
     
