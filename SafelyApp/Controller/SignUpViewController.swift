@@ -168,8 +168,10 @@ class SignUpViewController: UIViewController {
             let COLLECTION = "users"
             
             let NAME = "name"
+            let EMAIL = "email"
             let _NAME = userData.name
-            let data : [String : String] = [NAME :  _NAME]
+            let _EMAIL = userData.email
+            let data : [String : String] = [NAME :  _NAME, EMAIL :  _EMAIL]
             
             database.collection(COLLECTION).document(email!).getDocument { (document, error) in
                 self.database.collection(COLLECTION).document(self.userData.email).setData(data) { (error) in
