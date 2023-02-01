@@ -200,61 +200,62 @@ En dado caso que se quiera utilizar alguna cuenta de prueba, se puede implementa
 	}
 	
 	.container__img--login {
-		background: url(./resources/img/pantallas/login.png);
+		background: url(https://github.com/ReusHarper/SafelyApp_iOS/blob/main/resources/img/pantallas/login.png);
 		background-position: center center;
 		background-size: cover;
 	}
 	
 	.container__img--signup {
-		background: url(./resources/img/pantallas/signup.png);
+		background: url(https://github.com/ReusHarper/SafelyApp_iOS/blob/main/resources/img/pantallas/signup.png);
 		background-position: center center;
 		background-size: cover;
 	}
 	
 	.container__img--account {
-		background: url(./resources/img/pantallas/account.png);
+		background: url(https://github.com/ReusHarper/SafelyApp_iOS/blob/main/resources/img/pantallas/account.png);
 		background-position: center center;
 		background-size: cover;
 	}
 	
 	.container__img--add {
-		background: url(./resources/img/pantallas/add.png);
+		background: url(https://github.com/ReusHarper/SafelyApp_iOS/blob/main/resources/img/pantallas/add.png);
 		background-position: center center;
 		background-size: cover;
 	}
 	
 	.container__img--contacts {
-		background: url(./resources/img/pantallas/contacts.png);
+        https://github.com/ReusHarper/SafelyApp_iOS/blob/maihttps://github.com/ReusHarper/SafelyApp_iOS/blob/main/resources/img/pantallas/account.png
+		background: url(https://github.com/ReusHarper/SafelyApp_iOS/blob/main/resources/img/pantallas/contacts.png);
 		background-position: center center;
 		background-size: cover;
 	}
 	
 	.container__img--maps {
-		background: url(./resources/img/pantallas/maps.png);
+		background: url(https://github.com/ReusHarper/SafelyApp_iOS/blob/main/resources/img/pantallas/maps.png);
 		background-position: center center;
 		background-size: cover;
 	}
 	
 	.container__img--maps3d {
-		background: url(./resources/img/pantallas/maps3d.png);
+		background: url(https://github.com/ReusHarper/SafelyApp_iOS/blob/main/resources/img/pantallas/maps3d.png);
 		background-position: center center;
 		background-size: cover;
 	}
 	
 	.container__img--notifications {
-		background: url(./resources/img/pantallas/notifications.png);
+		background: url(https://github.com/ReusHarper/SafelyApp_iOS/blob/main/resources/img/pantallas/notifications.png);
 		background-position: center center;
 		background-size: cover;
 	}
 	
 	.container__img--requests {
-		background: url(./resources/img/pantallas/requests.png);
+		background: url(https://github.com/ReusHarper/SafelyApp_iOS/blob/main/resources/img/pantallas/requests.png);
 		background-position: center center;
 		background-size: cover;
 	}
 	
 	.container__img--sidemenu {
-		background: url(./resources/img/pantallas/sidemenu.png);
+		background: url(https://github.com/ReusHarper/SafelyApp_iOS/blob/main/resources/img/pantallas/sidemenu.png);
 		background-position: center center;
 		background-size: cover;
 	}
