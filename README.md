@@ -101,6 +101,15 @@ A continuación se muestra cada una de las pantallas que conforman a la aplicaci
 
 <br><br>
 <div class="title">
+	Cuenta
+</div>
+
+<p style="display: flex; justify-content: center;">
+    <img src="https://raw.githubusercontent.com/ReusHarper/SafelyApp_iOS/main/resources/img/pantallas/account.png" width="225" height="500">
+</p>
+
+<br><br>
+<div class="title">
 	Contactos
 </div>
 
