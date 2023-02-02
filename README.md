@@ -50,81 +50,81 @@ A continuación se muestra cada una de las pantallas que conforman a la aplicaci
 	Inicio de Sesión
 </div>
 
-<div class="container">
-	<img class="container__img container__img--login">
-</div>
+<p style="display: flex; justify-content: center;">
+    <img src="https://raw.githubusercontent.com/ReusHarper/SafelyApp_iOS/main/resources/img/pantallas/login.png" width="225" height="500">
+</p>
 
 <br><br>
 <div class="title">
 	Creación de cuenta
 </div>
 
-<div class="container">
-	<img class="container__img container__img--signup">
-</div>
+<p style="display: flex; justify-content: center;">
+    <img src="https://raw.githubusercontent.com/ReusHarper/SafelyApp_iOS/main/resources/img/pantallas/signup.png" width="225" height="500">
+</p>
 
 <br><br>
 <div class="title">
 	Mapa 2D
 </div>
 
-<div class="container">
-	<img class="container__img container__img--maps">
-</div>
+<p style="display: flex; justify-content: center;">
+    <img src="https://raw.githubusercontent.com/ReusHarper/SafelyApp_iOS/main/resources/img/pantallas/maps.png" width="225" height="500">
+</p>
 
 <br><br>
 <div class="title">
 	Mapa 3D
 </div>
 
-<div class="container">
-	<img class="container__img container__img--maps3d">
-</div>
+<p style="display: flex; justify-content: center;">
+    <img src="https://raw.githubusercontent.com/ReusHarper/SafelyApp_iOS/main/resources/img/pantallas/maps3d.png" width="225" height="500">
+</p>
 
 <br><br>
 <div class="title">
 	Notificaciones
 </div>
 
-<div class="container">
-	<img class="container__img container__img--notifications">
-</div>
+<p style="display: flex; justify-content: center;">
+    <img src="https://raw.githubusercontent.com/ReusHarper/SafelyApp_iOS/main/resources/img/pantallas/notifications.png" width="225" height="500">
+</p>
 
 <br><br>
 <div class="title">
 	Menu lateral
 </div>
 
-<div class="container">
-	<img class="container__img container__img--sidemenu">
-</div>
+<p style="display: flex; justify-content: center;">
+    <img src="https://raw.githubusercontent.com/ReusHarper/SafelyApp_iOS/main/resources/img/pantallas/sidemenu.png" width="225" height="500">
+</p>
 
 <br><br>
 <div class="title">
 	Contactos
 </div>
 
-<div class="container">
-	<img class="container__img container__img--contacts">
-</div>
+<p style="display: flex; justify-content: center;">
+    <img src="https://raw.githubusercontent.com/ReusHarper/SafelyApp_iOS/main/resources/img/pantallas/contacts.png" width="225" height="500">
+</p>
 
 <br><br>
 <div class="title">
 	Añadir
 </div>
 
-<div class="container">
-	<img class="container__img container__img--add">
-</div>
+<p style="display: flex; justify-content: center;">
+    <img src="https://raw.githubusercontent.com/ReusHarper/SafelyApp_iOS/main/resources/img/pantallas/add.png" width="225" height="500">
+</p>
 
 <br><br>
 <div class="title">
 	Solicitudes
 </div>
 
-<div class="container">
-	<img class="container__img container__img--requests">
-</div>
+<p style="display: flex; justify-content: center;">
+    <img src="https://raw.githubusercontent.com/ReusHarper/SafelyApp_iOS/main/resources/img/pantallas/requests.png" width="225" height="500">
+</p>
 
 
 [Más información sobre de la propuesta visual](https://docs.google.com/presentation/d/1GldHZZU80CWDQWvX90tkmaZ1dej5sDvDBgK3R9N4z8s/edit?usp=sharing)
@@ -147,14 +147,15 @@ Un punto a destacar sobre ello es que actualmente en las estadística oficiales 
 
 Para este proyecto es posible crear una cuenta simplemente proporcionando una dirección de email así también como una contraseña. <br><br>
 
-<div class="container">
-	<img class="container__img container__img--signup">
-</div>
+<p style="display: flex; justify-content: center;">
+    <img src="https://raw.githubusercontent.com/ReusHarper/SafelyApp_iOS/main/resources/img/pantallas/signup.png" width="225" height="500">
+</p>
 
 <div class="subtitle">
 	Pantalla de Sign up
 </div>
 
+<br>
 En dado caso que se quiera utilizar alguna cuenta de prueba, se puede implementar las siguientes:<br><br>
 
 - ***Usuario de prueba 1:*** **Email:** prueba@gmail.com - **Password:** 123456
@@ -170,7 +171,7 @@ En dado caso que se quiera utilizar alguna cuenta de prueba, se puede implementa
 - **Lottie:** Se implemento con el fin de poder agregar imágenes y animaciones sencillas para las pantallas de carga (aunque por el momento no fueron agregadas debido a una falta de tiempo para su desarrollo, por lo que se planea lanzar una versión con estas herramientas más adelante).
 - **TinyConstraints:** Para poder desplazar e interactuar en la parte del desarrollo de una forma sencilla cada una de las sub vistas creadas, empleando propiedades como Autolayout.
 
-<style>
+<!-- <style>
 	.title, .subtitle {
 		font-size: 20px;
 		font-weight: 900;
@@ -259,4 +260,4 @@ En dado caso que se quiera utilizar alguna cuenta de prueba, se puede implementa
 		background-position: center center;
 		background-size: cover;
 	}
-</style>
+</style> -->
